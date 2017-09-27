@@ -88,3 +88,15 @@ jquery插件：
 
 27. ztree	 加载json数据生成动态树
 (http://www.treejs.cn/v3/main.php)
+
+28.skitter	 绝对炫的带各种过渡效果的幻灯片插件
+(http://thiagosf.net/projects/jquery/skitter/)
+
+29.lazyload	 懒加载方式加载页面
+(http://www.jq22.com/jquery-info390)
+
+30.jquery.qrcode	生成二维码的插件
+(http://www.helloweba.com/view-blog-226.html)
+
+31. JQ-Slide插件	五种轮播
+(http://www.jq22.com/yanshi6016)
