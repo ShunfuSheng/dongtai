@@ -1,0 +1,32 @@
+art-template	模板引擎中间件
+
+morgan		输出日志中间件
+
+nodemon		修改自动重启服务的全局中间件
+
+http-proxy-middleware	代理中间件
+
+mongoose	操作mongodb数据库中间件
+
+sequelize	操作mysql数据库中间件
+
+socket.io	nodejs中的websocket模块，使用websocket和长轮询机制，兼容大部分浏览器
+
+multer		文件上传中间件
+
+
+
+
+
+npm包：
+    anywhere
+    快速搭建一个web服务器
+
+    nrm
+    nrm 是一个 NPM 源管理器，允许你快速地在如下 NPM 源间切换
+
+    pm2
+    pm2 是一个带有负载均衡功能的Node应用的进程管理器，摆脱单线程，利用全部的服务器上的所有CPU，0秒重载
+
+    localtunnel
+    一个内网穿透工具，让外网直接访问内网

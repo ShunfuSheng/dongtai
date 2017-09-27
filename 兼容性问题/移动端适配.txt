@@ -1,0 +1,26 @@
+function fullWidth(){
+  if($('body').width() >= 980){
+    $('html').css('font-size',100 + 'px');
+    return ;
+  }
+  if($('body').width() < 760){
+    $('html').css('font-size',80 + 'px');
+    
+    return ;
+  }
+ if($('body').width() < 450){
+    $('html').css('font-size',60 + 'px');
+    
+    return ;
+  }
+  if($('body').width() < 360){
+    $('html').css('font-size',35 + 'px');
+    $('.swiperM1').css('height',100 + 'px');
+    
+    return ;
+  }
+};
+fullWidth();
+$(window).resize(function(){
+  fullWidth();
+});

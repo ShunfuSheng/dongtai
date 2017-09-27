@@ -1,0 +1,90 @@
+js插件：
+1. PCASClass.js	 省市县插件
+(http://www.jq22.com/jquery-info673)
+jquery插件：
+
+2. pace 加载进度器
+(bootcdn.cn)
+
+1. layer	 弹出层效果
+(http://layer.layui.com/)
+
+2. validate	 表单验证
+(http://www.runoob.com/jquery/jquery-plugin-validate.html)
+
+3. datePicker	 日期选择插件
+(http://www.jq22.com/jquery-info10555)
+
+4. nicescroll	 滚动条插件
+(http://www.sucaihuo.com/js/125.html)
+
+5. SuperSlide	 轮播图，幻灯片，无缝滚动插件
+(http://www.superslide2.com/)
+
+6. TouchSlide	 触屏滑动幻灯片特效插件
+(http://www.superslide2.com/)
+
+7. zoomImgRollover 图片放大镜插件
+(http://blog.sina.com.cn/s/blog_6edd55060100sukz.html)
+
+8. cloudzoom	 图片放大镜插件，同上
+(http://www.jq22.com/jquery-info10410)
+
+8. eraser	 擦除图像局部区域插件
+(http://www.jq22.com/jquery-info471)
+
+9. scratchcard	 刮刮卡插件，和eraser很像
+(http://www.jq22.com/jquery-info10509)
+
+10. highcharts	 制作各种图表如股票走势图的插件(http://www.runoob.com/highcharts/highcharts-tutorial.html)
+
+11.lake		 水波倒影特效插件
+(http://www.jq22.com/jquery-info10607)
+
+12.checkbix	 复选框动画和样式插件
+(http://www.jq22.com/jquery-info10494)
+
+13.circletype	 字体变形插件
+(http://www.jq22.com/jquery-info181)
+
+14.jquery.carousel.js	 旋转木马插件
+(http://www.jq22.com/jquery-info9845)
+
+15.jquery-zoom	 图片内部缩放和平移插件
+(http://www.jq22.com/jquery-info10112)
+
+16.magnificent	 响应式图片放大镜插件，支持内部缩放和外部缩放
+(http://www.jq22.com/jquery-info9218)
+
+17.hiSlider	 功能强大的轮播图，响应式插件，支持移动端触摸事件
+(http://www.jq22.com/jquery-info9558)
+
+18.SangarSlider	 轮播图插件，支持图文混排，支持鼠标拖动和移动端触屏，支持各种形式的轮播，各种轮播效果
+(http://www.jq22.com/jquery-info8951)
+
+19.waterfall	 无限动态加载图片瀑布流特效插件
+(http://www.jq22.com/jquery-info9336)
+
+20.cropper	 图片剪裁插件
+(http://www.jq22.com/jquery-info9322)
+
+21.simple-calendar	多功能日历插件
+(http://www.jq22.com/jquery-info9256)
+
+22.dotdotdot	 单行、多行文本溢出显示省略号插件
+(http://www.jq22.com/jquery-info8977)
+
+23.fullscreen	 全屏插件
+(https://github.com/kayahr/jquery-fullscreen-plugin)
+
+24.fullpage	 全屏滚动插件，常用于营销网站
+(http://www.jq22.com/jquery-info1124)
+
+25.layerSlider	 带动画效果的幻灯片插件
+(http://sc.chinaz.com/jiaoben/140815215490.htm)
+
+26.chosen	 下拉菜单插件
+(https://harvesthq.github.io/chosen/)
+
+27. ztree	 加载json数据生成动态树
+(http://www.treejs.cn/v3/main.php)

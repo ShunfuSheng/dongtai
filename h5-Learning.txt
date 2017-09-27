@@ -1,0 +1,285 @@
+##设置鼠标指针放到所有div上时的样式
+div:nth-child(n):hover{ }
+
+##scale指缩放，一个值指的是同时缩放，两个值指的是水平和垂直缩放
+transform: scale(1.5, 1.5)
+
+##rotate指旋转，deg指的是旋转的度数
+transform: rotate(-15deg)
+
+##transition属性定义动画的过渡过程，ease-in-out指的是速度曲线，由慢到快再到慢
+transition: name 2s ease-in-out
+
+##设置边框四个角的角度，50%为一个圆
+border-radius: 50%
+
+##设置行高，可用于单行文本的垂直居中
+line-height: 150px
+
+##<main>标签规定了文档的主要内容，它里面的内容对于文档来说是唯一的
+
+##<section>标签定义了文档的节或段
+
+##js中自定义的函数要在此函数外部调用才能生效
+
+##注意css中的优先级关系，有时可能想要的css样式会被高优先级的样式覆盖
+
+##important表示优先级最高，指的是单个属性值
+.error{
+	color: yellow !important
+}
+
+##onkeyup属性监听键盘行为，松开键盘时会触发，接收一个触发事件
+<body onkeyup="key(event)">
+
+##onclick属性监听鼠标行为，单击鼠标时会触发，接收一个触发事件
+<div onclick="click(event)">
+
+##charAt为字符串的成员方法，该方法可以返回指定位置的字符
+
+##setTimeout和setInterval的区别：前者仅调用一次指定函数，后者是每隔一定时间会去调用指定函数；如果要实现循环，setTimeout要在内部使用，setInterval要在外部使用
+
+##设置背景图片大小，以此来适应容器，两个值分别为宽和高，值为百分比时是以元素容器的宽高为参照，当只设一个值时，另一个值默认为等比例缩放
+background-size: 100%;		background-size: 180px 150px;
+
+##设置背景图片的位置来决定显示给用户的内容(0% 0%为显示图片的左上角部分，100% 100%位显示图片的右下角部分)，只设一个值时另一个默认50%
+background-position: 65% 30%
+
+##设置背景图片为不重复显示
+background-repeat: no-repeat
+
+##固定背景图片
+background-attachment: fixed
+
+##设置多张背景图片共存时的混合模式
+background-blend-mode: multiply
+
+##外边距，两个值时顺序是 上下 左右；三个值时指的是上 左右 下，auto表示自适应，一般用来居中
+margin: 100px auto
+
+##@keyframes 用来定义关键帧动画，from to 或者 0% 100%
+
+##voerflow属性规定当内容溢出元素框时发生的事情，可以用来隐藏滚动条
+overflow: hidden
+
+##box-sizing属性强制规定元素的总大小(即内容+内边距+边框)为我们设置的大小
+box-sizing: border-box
+
+##子元素如果设置为绝对定位，那么它的直接父元素要设置为相对定位，否则绝对定位的参考点为body元素
+
+##skew定义2D旋转，rotate可定义3D旋转
+transform: skew(10deg,20deg)
+
+##shadow阴影：1.x方向的偏移量。 2.y方向的偏移量。 3.阴影的模糊程度。 4.阴影的大小，正数是阴影变大，负数是阴影变小。 5.阴影的颜色
+box-shadow: 10px 10px 5px 4px yellow
+
+##css样式中宽和高属性如果设置为百分比，则是相对于父元素来讲
+
+##设置字体粗细，normal在很多字体属性中用以恢复默认值
+font-weight: normal
+
+##在元素之前定义内容，无法选中这些前缀，所以也不能复制这些内容
+.addr:before{ }
+
+##在元素之后定义内容，无法选中这些后缀
+.addr:after{ }
+
+##在html标签中，分为行元素和块元素，每个块元素独占一行，行元素则接在后面不会另起一行，并且行元素不可设置宽和高属性，可以通过display的方法改变元素的性质
+
+##display属性规定元素应该生成框的类型，可用来隐藏元素，block指的是块元素
+display: block
+
+##把标签变为行内块元素
+display: inline-block
+
+##设置透明度
+opacity: 0.7
+
+##设置元素的层级关系，z-index是一个相对的概念，即在处理子元素的层级关系时先设置层级为0给父元素
+z-index: -1
+
+##设置行首缩进
+text-indent: 2em
+
+##article标签定义文章
+
+##address标签定义文档或文章的作者的联系信息
+
+#linear-gradient值设定颜色的线性渐变
+background: linear-gradient(to bottom, rgb(13,104,188), rgb(114,173,224))
+
+##布局设为弹性布局，设置了此布局后，所有子元素不是浮动就是块，再无行内元素之说；子元素的float、clear、vertical-align属性将失效
+display: flex
+
+##定义弹性布局子元素的排列方式为竖直排列
+flex-direction: column
+
+##定义弹性布局子元素横轴方向的对齐方式，space-between定义各项目之间留有空白，两侧不留白；space-around定义各项目之间以及两侧都留有空白
+justify-content: space-between
+
+##弹性布局的内部排列方式，wrap值规定灵活项目在必要时拆行或拆列，wrap-reverse为逆序；浮动布局能自动拆行或拆列
+flex-wrap: wrap
+
+##设置弹性布局中的行内元素为等比例排列，设置子元素宽度比例时使用
+flex-grow: 1
+
+##在弹性布局中设置绝对居中，前者定义了项目在主轴上的对齐方式，后者针对的是交叉轴
+justify-content: center
+align-items: center
+
+##<sup>标签定义元素的右上角上浮内容
+
+##&nbsp关键字用于定义多个空格
+
+##indexOf()方法返回某个指定的子字符串在字符串中首次出现的位置，使用lastIndexOf方法得到最后一级路径在字符串中的位置，然后使用substring获得子字符串
+
+var imgSrc = img.src.substring(img.src.lastIndexOf('/'))
+
+
+##将特定字符替换成空字符，即删掉它
+string.replace('℃', '')
+
+##去除超链接的底线
+text-decoration: none
+
+##js和jquery中获取浏览器可见区域的宽度和高度
+document.documentElement.clientHeight	  或	 $(window).height()
+document.documentElement.clientWidth	  或	 $(window).width()
+
+##设置是否选中字体，这里设置为不可选中
+-moz-user-select: none
+
+##设置元素与屏幕外的观察者的视线距离，要设在呈现3D效果元素的父元素
+perspective: 900px
+
+##接在perspective属性之后，没有设置perspective则此属性无效，设置与观察者的视线角度，此属性的3D呈现效果会随着父元素容器的大小变化
+perspective-origin: 30% 80%
+
+##设置旋转轴，这里设置为元素左边的Y轴
+transform-origin: 0 0 0
+
+##打开子元素的3D效果限制，允许子元素出现3D视图，即保留空间位置
+transform-style: preserve-3d
+
+##设置动画的播放：名为spin动画的匀速无限播放
+animation: 10s spin linear infinite
+
+##一个类中不带参数的内部成员方法只能调用内部成员属性，可以为这个类新建一个属性并赋值，实现调用外部变量。
+
+##设置自定义鼠标指针形状，后面的备用形状一定要写
+cursor: url(...),auto
+
+##规定动画在播放之前或之后，其动画效果是否可见，both表示开始和结束状态都停留
+animation-fill-mode: both
+
+##css中允许多个class，第一次赋值class样式才会有动画效果，之后的二次赋名没有什么作用，除非变动class的样式或者先移除再赋值。
+
+##time为时间标签，定义时间，但大多浏览器尚不支持
+
+##progress为进度条标签，value表示播放量占总量的比例
+<progress value='0'></progress>
+
+##nth-child()选择器选取父元素的第n个子元素，与类型无关；odd和even参数代表选择奇偶数
+
+##nth-of-type()选择器选取父元素的第n个指定类型的子元素
+
+##first-letter选取元素中的第一个字符
+h2:first-letter{ }
+
+##相对布局元素的子元素最好不要溢出父元素，否则可能会影响到其他相对布局元素的子元素
+
+##q标签表示带有引号的文本，引号无法选取，可以嵌套，可以通过quotes属性设置引号类型
+quotes: '『' '』' '┏' '┙';
+
+##blockquote和div有着类似的应用，都是块元素，都有外边距
+
+##figure标签规定独立的流内容(图像、图表、照片、代码等等)，figcaption标签内置于figure标签中，用于定义figure元素的标题。figure为块元素，宽度width等于父元素的宽度。
+
+##语义化标签code，用于表示计算机源码或其他机器可阅读的文本内容
+
+##pre元素定义预格式化文本，被包围在pre元素中的文本通常会保留空格和换行符，而文本也会呈现为等宽字体。
+
+##ol标签定义有序列表，默认会在li前添加序号；dl表示带描述的列表
+
+
+##conter-reset属性设置某个选择器出现次数的计数器的值，设置在祖先元素，默认为0，可以在第二个参数设置初始值
+counter-reset: sheng -1;
+
+##counter-increment设置每次出现的计数器增量并且自增一次，默认增量为1，可以在第二个参数设置增量
+counter-increment: sheng;
+
+##应用计数器变量
+content: counter(h1)' ';
+
+
+##a标签中，使用属性href="#id"可以实现页面内跳转，而title属性当鼠标放上去时给我们的提示作用
+
+##hx有各自的文字大小还有默认的上下边距及加粗效果，这些样式并不重要，要正确应用这些标题标签，一般如果有多篇文章，使用一个h1和多个h2，因为搜索引擎搜的通常是h1
+
+##英文空格使用的是&nbsp;      中文空格使用的是&#x3000;
+
+##css中选择器不起作用可能是因为将一个块元素放置到行元素中了
+
+##定宽居中三个必要条件：1.定宽width； 2.居中margin； 3.元素必须为块元素
+width: 800px;
+margin: 10px auto;
+
+##使用position: fiexed可以起到固定位置的作用，但定宽居中失败，因为原先的元素占有的位置被其它元素占有，fiexd元素位于最高层，可以嵌套一个子元素同时实现固定位置和定宽居中。
+
+##word-wrap属性允许长单词或URL地址换行到下一行，它能直接折断单词并强制换行
+word-wrap: break-word
+
+##white-space属性指定元素内的空白怎样处理:
+   nowrap: 值规定段落中的文本不进行换行
+   pre: 空白会被浏览器保留，其行为方式类似html中的<pre>标签
+
+##resize属性允许用户手动调整元素的尺寸，前提是要设置元素的overflow属性，因为如果拖动过程中如果发生内容溢出则需要作出相应处理
+resize: both
+
+##中文字符可以在任意两个字之间换行，所以通常会出现纵向滚动条，而英文单词默认不会在单词内部换行，所以如果写一个长单词则不会出现换行,通常出现横向滚动条
+
+##outline是border外的东西，是边框的边框
+
+##浮动布局float和相对布局relative可以共用，relative会以浮动后的位置作为参照物，不管谁先谁后，结果都一样
+
+##出现浮动布局，固定定位，绝对定位时，元素脱离原有的布局流，会发生：1.块级元素不占整行宽度；2.元素原有的位置被占据，但如果是文本的话，还是会挤开其他元素的文本
+
+##有时候会同一行的元素会出现错位，可能是文本基线对齐方式引发的问题
+
+##行内块元素无法进行定宽居中，但可以进行text-align: center的子元素居中；固定宽高的块元素无法在父元素中进行text-align: center，但可以定宽居中
+
+##行高只对行内元素和字符有用，对行内块和块元素没用
+
+##行内块元素没有外边距重叠现象，行内元素可以设置外边距margin和内边距padding，但对上下无效
+
+##样式继承：通常跟文本有关的样式和跟列表有关的样式是可以继承的，而跟盒模型之类有关的样式通常是不能继承的，部分标签内部自带了一些样式，需要在这些标签中覆盖掉原值，有些元素内部自带了相对字体大小，如h1，small等，它们在继承父类样式的时候font-size需要重新计算，当然也可以直接强制改变其样式
+
+##resize的设置使用户能自己拖动容器控制大小，但前提是overflow不为默认值
+
+##inline-block和inline-table的区别是前者单元格不会自动伸缩，内容有多大，td就只有多大；后者会自动伸缩，从而充满整个table
+
+##伪类选择器before和after都可以添加图片，也可以进行基线对齐，但无法对齐到middle，可以通过设置行高来解决这个问题
+
+##块级多层嵌套时，最外层设置“高度”后，无法通过设置100%来一层一层地往外撑开直至所有块元素达到最外层的宽度或高度，且此处的百分数没有参照值，无意义；但如果是“宽度”则可以
+
+##td(或display:table-cell)对高度敏感，可使用vertical-align来设置子元素的垂直居中
+
+##div等块元素无法包在p标签里面，会解析成两个p，不管你把div重设成什么样的元素
+
+## window对象有个name属性，该属性有个特征：即在一个窗口(window)的生命周期内,窗口载入的所有的页面都是共享一个window.name的，每个页面对window.name都有读写的权限，window.name是持久存在一个窗口载入过的所有页面中的，并不会因新页面的载入而进行重置。
+
+## document.compatMode用来判断当前浏览器采用的渲染方式，只有两个值：BackCompat和CSS1Compat。当document.compatMode等于BackCompat时，浏览器客户区宽度是document.body.clientWidth；当document.compatMode等于BackCompat时，浏览器客户区宽度是document.body.clientWidth
+
+
+第三阶段：
+## 页面的各种扩展性功能: 页面分享效果（jiaThis,bshare,百度分享等）、在线qq客服js
+
+## cms: 内容管理系统(wordPress、phpcms、dedecms等)
+
+## crm: 客户关系管理（Customer relationship manager），其实就是几张管理客户信息的数据表
+
+
+附加：
+OPTIONS请求方法的主要用途有两个：
+1、获取服务器支持的HTTP请求方法；也是黑客经常使用的方法。
+2、用来检查服务器的性能。例如：AJAX进行跨域请求时的预检，需要向另外一个域名的资源发送一个HTTP OPTIONS请求头，用以判断实际发送的请求是否安全。

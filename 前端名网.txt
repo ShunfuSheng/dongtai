@@ -1,0 +1,38 @@
+http://www.17sucai.com/   网站图片、特效素材
+
+http://www.iconfont.cn/   图标素材
+
+http://www.jq22.com/	  jQuery插件库
+
+http://www.lanrenzhijia.com/   懒人之家jquery插件以及各种js扩展性功能网
+
+https://github.com/JingwenTian/awesome-frontend		前端工具总结
+
+https://github.com/helloqingfeng/Awsome-Front-End-learning-resource	前端大杂烩
+
+https://github.com/aui/artTemplate	art-template模板引擎
+
+http://588ku.com/			千库网，psd素材
+
+http://apistore.baidu.com/		各式各样的api数据接口
+(apikey: 6df030858631cb00d3a2ab0da6f013e1)
+
+http://codepen.io/	在线编辑h5页面
+
+https://github.com/jobbole/awesome-javascript-cn	awesome前端资源大全
+
+https://mp.weixin.qq.com/		微信相关开发文档地址
+
+https://github.com/node-webot/wechat	微信公众号开发nodejs版
+
+https://github.com/justjavac/awesome-wechat-weapp	微信小程序开发资源汇总
+
+http://lbsyun.baidu.com/	百度地图接口开发
+
+http://www.zhangxinxu.com/wordpress/2012/08/mobile-wap-page-knowledge-share/	移动端网页开发问题
+
+http://www.html5tricks.com/	HTML资源教程网
+
+http://www.htmleaf.com/		前端资源教程库
+
+http://www.htmleaf.com/ziliaoku/qianduanjiaocheng/201705174518.html	js十种经典排序算法
