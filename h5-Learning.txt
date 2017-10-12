@@ -311,3 +311,7 @@ OPTIONS请求方法的主要用途有两个：
 ## nodeName：用于获取元素的标签类型
 
 ## Object.prototype.toString.call() 获取引用类型的具体数据类型
+
+## 可枚举性：如果一个属性的enumerable为false，可以通过打点方式直接获取该属性，但是一般的遍历操作都无法获取该属性
+
+## Symbol是ES6引入的一种数据类型，与字符串类似，可用于对象的key值，它表示独一无二的值，
