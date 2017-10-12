@@ -314,7 +314,7 @@ OPTIONS请求方法的主要用途有两个：
 
 ## 可枚举性：如果一个属性的enumerable为false，可以通过打点方式直接获取该属性，但是一般的遍历操作都无法获取该属性
 
-## Object.defineProperty()用于给对象的新增键值对或修改原有的value属性，第一个参数为对象本身，第二个参数表示key值
+## Object.defineProperty()用于给对象新增键值对或修改原有的value属性，第一个参数为对象本身，第二个参数表示key值
 第三个参数表示value的属性，是一个对象，包含4个属性：
 value: 设置value的值
 writable: 值是否可以重写
@@ -322,3 +322,5 @@ enumerable: 目标属性是否可以被枚举
 configurable: 目标属性是否可以被删除或是否可以再次修改特性
 
 ## Symbol是ES6引入的一种数据类型，与字符串类似，可用于对象的key值，它表示独一无二的值
+
+## 'key' in obj 用于判断'key'值是否为obj中的key值
