@@ -298,4 +298,16 @@ OPTIONS请求方法的主要用途有两个：
 
 ## createRange()方法用户创建一个区域，隔离于DOM文档
 
-## selectNodeContents(node)方法把node节点的子节点信息填充到区域range内
+## selectNode(node)方法把整个node节点的信息，包括子节点中的内容填充到范围range内
+
+## selectNodeContents(node)方法把node节点的子节点信息填充到范围range内
+
+## extractContents()方法从文档中移除范围选区。这个方法的返回值是移除的片段，利用这个返回值，可以把这个片段插入到页面的其他地方
+
+## deleteContents()方法从文档中彻底删除范围所包含的内容
+
+## matches('css selector')用于判断元素是否为css选择器选中的内容
+
+## nodeName：用于获取元素的标签类型
+
+## Object.prototype.toString.call() 获取引用类型的具体数据类型
