@@ -283,3 +283,19 @@ resize: both
 OPTIONS请求方法的主要用途有两个：
 1、获取服务器支持的HTTP请求方法；也是黑客经常使用的方法。
 2、用来检查服务器的性能。例如：AJAX进行跨域请求时的预检，需要向另外一个域名的资源发送一个HTTP OPTIONS请求头，用以判断实际发送的请求是否安全。
+
+## select()方法全选输入框中的内容并使其处于高亮状态
+
+## setSelectionRange()方法选中输入框中的部分内容并使其处于高亮状态
+
+## contenteditable节点属性表示该元素内容可编辑
+
+## window.getSelection()方法用于屏幕取词和获取鼠标光标的位置
+
+## removeAllRanges()方法用于取消处于选中状态的文字
+
+## addRange()方法用于手动添加文字到选中状态中
+
+## createRange()方法用户创建一个区域，隔离于DOM文档
+
+## selectNodeContents(node)方法把node节点的子节点信息填充到区域range内
