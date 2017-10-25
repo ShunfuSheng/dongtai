@@ -328,3 +328,5 @@ configurable: 目标属性是否可以被删除或是否可以再次修改特性
 ## document.execCommand()方法让js能使用命令行的方式操作文档，包括打开，另存为，全选，对选中的内容进行编辑等功能
 
 ## document.queryCommandSupported()方法判断当前浏览器是否支持execCommand中的某一命令
+
+## contenteditable 属性规定时刻可编辑元素的内容
