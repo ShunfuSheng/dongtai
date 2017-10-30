@@ -36,3 +36,5 @@ http://www.html5tricks.com/	HTML资源教程网
 http://www.htmleaf.com/		前端资源教程库
 
 http://www.htmleaf.com/ziliaoku/qianduanjiaocheng/201705174518.html	js十种经典排序算法
+
+http://www.html5code.net/	H5模板网
