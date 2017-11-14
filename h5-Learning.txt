@@ -336,3 +336,7 @@ configurable: 目标属性是否可以被删除或是否可以再次修改特性
 ## MediaRecorder对象用于在getUserMedia的基础上录制视频
 
 ## webRTC用于实现点对点视频通信
+
+## FileReader 用来读取input标签中的文件内容，常用来做图片上传的预览和文件传输
+
+## FormData对象用于创建或者获取表单数据，可以独立于表单使用
