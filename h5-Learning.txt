@@ -292,6 +292,8 @@ OPTIONS请求方法的主要用途有两个：
 
 ## window.getSelection()方法用于屏幕取词和获取鼠标光标的位置
 
+## document.selection方法用于屏幕取词和获取鼠标光标的位置（IE下有用）
+
 ## removeAllRanges()方法用于取消处于选中状态的文字
 
 ## addRange()方法用于手动添加文字到选中状态中
