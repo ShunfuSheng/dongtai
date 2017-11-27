@@ -86,7 +86,7 @@ jquery插件：
 26.chosen	 下拉菜单插件
 (https://harvesthq.github.io/chosen/)
 
-27. ztree	 加载json数据生成动态树
+27.ztree	 加载json数据生成动态树
 (http://www.treejs.cn/v3/main.php)
 
 28.skitter	 绝对炫的带各种过渡效果的幻灯片插件
@@ -98,5 +98,8 @@ jquery插件：
 30.jquery.qrcode	生成二维码的插件
 (http://www.helloweba.com/view-blog-226.html)
 
-31. JQ-Slide插件	五种轮播
+31.JQ-Slide插件	五种轮播
 (http://www.jq22.com/yanshi6016)
+
+32.Velocity.js      js动画插件
+(http://www.mrfront.com/docs/velocity.js/index.html)

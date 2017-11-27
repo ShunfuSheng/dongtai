@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>图片上传测试</title>
+    <style>
+        form {
+            width: 500px;
+            margin: 100px auto;
+            border: 1px solid red;
+            text-align: center;
+        }
+
+        form>div {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="my-form" action="#" method="post" enctype="multipart/form-data">
+        <div>
+            <label>上传单张图片:</label>
+            <input type="file" onchange="previewFile()">
+            <br>
+            <img src="" height="200" alt="Image preview...">
+        </div>
+        <!-- <div>
+            <label>上传多张图片:</label>
+            <input id="browse" type="file" onchange="previewFiles()" multiple>
+            <div id="preview"></div>
+        </div> -->
+        <button id="submit" type="button">提交</button>
+        <button id="remove" type="button">删除</button>
+    </form>
+</body>
+
+<script>
+    // 图片上传预览（单个）
+    function previewFile() {
+        var preview = document.querySelector('img');
+        var input = document.querySelector('input[type=file]');
+
+        if (input.files && input.files[0]) {
+            var file = input.files[0];
+            var reader = new FileReader();
+            reader.addEventListener("load", function () {
+                preview.src = reader.result;
+            }, false);
+            reader.readAsDataURL(file);
+        } else {
+            input.select();
+            input.blur();
+            var src = document.selection.createRange().text;
+            preview.src = src;
+        }
+    }
+
+    // 图片上传预览（多个）
+    function previewFiles() {
+        var preview = document.querySelector('#preview');
+        var files = document.querySelector('input[type=file]').files;
+
+        function readAndPreview(file) {
+            // 确保 `file.name` 符合我们要求的扩展名
+            if (/\.(jpe?g|png|gif)$/i.test(file.name)) {
+                var reader = new FileReader();
+                reader.addEventListener("load", function () {
+                    var image = new Image();
+                    image.height = 100;
+                    image.title = file.name;
+                    image.src = this.result;
+                    preview.appendChild(image);
+                }, false);
+                reader.readAsDataURL(file);
+            }
+        }
+
+        if (files) {
+            [].forEach.call(files, readAndPreview);
+        }
+    }
+</script>
+
+</html>
