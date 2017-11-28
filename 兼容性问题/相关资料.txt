@@ -1,0 +1,8 @@
+# 一行代码解决各种IE兼容问题,IE6,IE7,IE8,IE9,IE10
+http://blog.csdn.net/jgwei/article/details/18599433
+
+# 让IE9以下的浏览器支持CSS3圆角
+http://blog.csdn.net/lxcao/article/details/53192287
+
+# 淘宝——移动端页面终端适配
+https://www.cnblogs.com/sshch/articles/6564210.html
