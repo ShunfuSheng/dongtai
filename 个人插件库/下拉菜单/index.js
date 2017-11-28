@@ -2,25 +2,29 @@
 $('.drop-menu').click(function (e) {
     toggleDrop(e, $(this));
 });
-$('.dropList li').click(function (e) {
+
+$('.drop-list li').click(function (e) {
     e.stopPropagation();
-    $(this).parent().siblings('.touchSelect').val($(this).text());
-    $('.dropList').fadeOut("fast");
-    // 处理可选项input
-    $('.selectable').hide();
-    var itemId = $(this).data('id');
-    $('#' + itemId).show();
+    // 赋值text
+    var text = $(this).text()
+    $(this).parent().siblings('.touch-select').val(text);
+    // 赋值value
+    var value = $(this).data('id');
+    console.log(value);
+    $(this).parent().siblings('.select-result').val(value);
+    $('.drop-list').fadeOut("fast");
 });
+
 $(document).click(function () {
-    $('.dropList').fadeOut("fast");
+    $('.drop-list').fadeOut("fast");
 });
 
 
 // 处理下拉菜单
 function toggleDrop(event, $this) {
     event.stopPropagation();
-    $('.dropList').each(function () {
+    $('.drop-list').each(function () {
         $(this).fadeOut("fast");
     });
-    $this.find('.dropList').slideToggle();
+    $this.find('.drop-list').slideToggle();
 }

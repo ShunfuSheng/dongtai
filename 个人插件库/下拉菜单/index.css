@@ -7,7 +7,7 @@ div.drop-menu {
 	position: relative;
 }
 
-input.touchSelect {
+input.touch-select {
     width: 100%;
     height: 34px;
     padding: 6px 12px;
@@ -16,7 +16,7 @@ input.touchSelect {
     border: 1px solid gainsboro;
 }
 
-span.dropTouch {
+span.drop-touch {
     width: 20px;
     height: 25px;
 	position: absolute;
@@ -27,7 +27,7 @@ span.dropTouch {
     background-size: cover;
 }
 
-ul.dropList {
+ul.drop-list {
 	width: 100%;
 	max-height: 155px;
 	padding: 0;
@@ -41,7 +41,7 @@ ul.dropList {
 	overflow-y: auto;
 }
 
-ul.dropList li {
+ul.drop-list li {
 	height: 34px;
 	line-height: 31px;
 	padding-left: 8px;
@@ -50,6 +50,6 @@ ul.dropList li {
 	border-bottom: 1px solid gainsboro;
 }
 
-ul.dropList li:hover {
+ul.drop-list li:hover {
 	background-color: #459cd6;
 }

@@ -9,13 +9,14 @@
 </head>
 <body>
     <div class="drop-menu">
-        <input class="touchSelect" type="text" name="policy" value="默认大于阈值即触发" readonly>
-        <span class="dropTouch"></span>
-        <ul class="dropList">
-            <li>默认大于阈值即触发</li>
-            <li data-id="accumulate">累计出现多次再触发</li>
-            <li data-id="basic">同比差幅多少再触发</li>
-            <li data-id="ring">环比差幅多少再触发</li>
+        <input class="select-result" type="hidden" name="policy" value="0">
+        <input class="touch-select" type="text" value="默认大于阈值即触发" readonly>
+        <span class="drop-touch"></span>
+        <ul class="drop-list">
+            <li data-id="0">默认大于阈值即触发</li>
+            <li data-id="1">累计出现多次再触发</li>
+            <li data-id="2">同比差幅多少再触发</li>
+            <li data-id="3">环比差幅多少再触发</li>
         </ul>
     </div>
 </body>
