@@ -1,0 +1,18 @@
+<html>
+
+<head>
+    <title>网易移动端适配</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+</head>
+
+<body>
+
+    <script>
+        // 动态设置rem的大小，px转成rem的时候除以100；这里以iphone6设计稿为标准是除掉7.5，如果以iphone5为
+        // 标准时要除掉6.4
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    </script>
+</body>
+
+</html>

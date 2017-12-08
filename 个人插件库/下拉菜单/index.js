@@ -10,7 +10,6 @@ $('.drop-list li').click(function (e) {
     $(this).parent().siblings('.touch-select').val(text);
     // 赋值value
     var value = $(this).data('id');
-    console.log(value);
     $(this).parent().siblings('.select-result').val(value);
     $('.drop-list').fadeOut("fast");
 });

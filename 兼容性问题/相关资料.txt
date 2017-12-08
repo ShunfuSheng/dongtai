@@ -6,3 +6,6 @@ http://blog.csdn.net/lxcao/article/details/53192287
 
 # 淘宝——移动端页面终端适配
 https://www.cnblogs.com/sshch/articles/6564210.html
+
+# 淘宝和网易在移动端适配方面的做法
+http://hcysun.me/2015/10/19/一篇真正教会你开发移动端页面的文章-二/
