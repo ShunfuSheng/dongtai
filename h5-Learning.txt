@@ -346,3 +346,7 @@ configurable: 目标属性是否可以被删除或是否可以再次修改特性
 ## DocumentFragment 接口表示一个没有父级文件的最小文档对象，它被当做一个轻量版的Document使用，提高渲染性能
 
 ## Blob是一种js对象类型，blob 存储着大量的二进制数据，并且 blob 的 size 和 type 属性，都会被 file 对象所继承，它可以用来做大文件分割传输
+
+## text-align:justify 设置单行文本等间距分布
+
+## 在使用css3 transtion做动画效果时，优先选择transform，尽量不要使用height，width，margin和padding
