@@ -350,3 +350,6 @@ configurable: 目标属性是否可以被删除或是否可以再次修改特性
 ## text-align:justify 设置单行文本等间距分布
 
 ## 在使用css3 transtion做动画效果时，优先选择transform，尽量不要使用height，width，margin和padding
+
+## 使用window.open()并传入外部url参数时，主流浏览器可以正常打开窗口并获取新窗口的window对象；而IE可以正常打开窗口但不能获取window对象。
+不传入外部url时，都可以获取window，没有任何区别。
