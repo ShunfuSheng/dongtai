@@ -354,4 +354,4 @@ configurable: 目标属性是否可以被删除或是否可以再次修改特性
 ## 使用window.open()并传入外部url参数时，主流浏览器可以正常打开窗口并获取新窗口的window对象；而IE可以正常打开窗口但不能获取window对象。
 不传入外部url时，都可以获取window，没有任何区别。
 
-## eval 可以把简单的js字符串转化为js代码并且执行它
+## eval 可以把简单的js字符串转化为js代码并且执行它；复杂的js字符串可以用new Function()实现转化
