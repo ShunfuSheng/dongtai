@@ -355,3 +355,5 @@ configurable: 目标属性是否可以被删除或是否可以再次修改特性
 不传入外部url时，都可以获取window，没有任何区别。
 
 ## eval 可以把简单的js字符串转化为js代码并且执行它；复杂的js字符串可以用new Function()实现转化
+
+## hBuilder + html5PLUS + native.js实现基于webView的hybird混合开发；react-native实现js转化的原生开发
