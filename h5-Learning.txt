@@ -356,4 +356,4 @@ configurable: 目标属性是否可以被删除或是否可以再次修改特性
 
 ## eval 可以把简单的js字符串转化为js代码并且执行它；复杂的js字符串可以用new Function()实现转化
 
-## hBuilder + html5PLUS + native.js实现基于webView的hybird混合开发；react-native实现js转化的原生开发
+## hBuilder + html5PLUS + native.js实现基于webView的hybird混合开发，其内部使用phoneGap打包；react-native实现js转化的原生开发，类似于Weex + vue
