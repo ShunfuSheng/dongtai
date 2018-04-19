@@ -103,3 +103,6 @@ jquery插件：
 
 32.Velocity.js      js动画插件
 (http://www.mrfront.com/docs/velocity.js/index.html)
+
+33. swiper	移动端触摸滑动插件
+(http://www.swiper.com.cn/)
