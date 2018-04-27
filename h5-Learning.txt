@@ -360,4 +360,6 @@ configurable: 目标属性是否可以被删除或是否可以再次修改特性
 
 ## images.weserv.nl：一个图片请求代理服务，可以解决反盗链问题，还可以为图片做各种预处理，比如指定大小、裁剪、滤镜等。但是在国内访问速度有点而且有被墙的风险
 
+## referrer除了可以解决反盗链问题，也可以用来解决http和https之间的资源访问问题
+
 ## 前端反盗链的两种方法：1.在head内添加一个meta标签（这种方法兼容性好），<meta name="referrer" content="never" />；2.在资源加载标签如img中添加referrerPolicy="no-referrer"属性
