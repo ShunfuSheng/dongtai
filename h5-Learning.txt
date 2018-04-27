@@ -357,3 +357,5 @@ configurable: 目标属性是否可以被删除或是否可以再次修改特性
 ## eval 可以把简单的js字符串转化为js代码并且执行它；复杂的js字符串可以用new Function()实现转化
 
 ## hBuilder + html5PLUS + native.js实现基于webView的hybird混合开发，其内部使用phoneGap打包；react-native实现js转化的原生开发，类似于Weex + vue
+
+## images.weserv.nl：一个图片请求代理服务，可以解决反盗链问题，还可以为图片做各种预处理，比如指定大小、裁剪、滤镜等。但是有被墙的风险
