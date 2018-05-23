@@ -363,3 +363,5 @@ configurable: 目标属性是否可以被删除或是否可以再次修改特性
 ## referrer除了可以解决反盗链问题，也可以用来解决http和https之间的资源访问问题
 
 ## 前端反盗链的两种方法：1.在head内添加一个meta标签（这种方法兼容性好），<meta name="referrer" content="never" />；2.在资源加载标签如img中添加referrerPolicy="no-referrer"属性
+
+## position:sticky 粘性定位是相对定位和固定定位的混合，元素在跨越特定阈值前为相对定位，之后为固定定位
