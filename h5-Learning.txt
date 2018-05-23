@@ -365,3 +365,13 @@ configurable: 目标属性是否可以被删除或是否可以再次修改特性
 ## 前端反盗链的两种方法：1.在head内添加一个meta标签（这种方法兼容性好），<meta name="referrer" content="never" />；2.在资源加载标签如img中添加referrerPolicy="no-referrer"属性
 
 ## position:sticky 粘性定位是相对定位和固定定位的混合，元素在跨越特定阈值前为相对定位，之后为固定定位
+
+## Element.getBoundingClientRect() 方法返回元素的大小及其相对于视口（当前窗口）的位置，浏览器兼容性很好
+
+## IntersectionObserver对象用于异步观察目标元素与祖先元素或视口的交集变化，不同于事件监听机制的是它不运行在主线程上，性能绝佳。详见 https://developer.mozilla.org/zh-CN/docs/Web/API/Intersection_Observer_API
+
+## window.requestAnimationFrame 运行机制类似于setTimeout，主要用途是按帧对网页进行重绘，目的是为了让各种网页动画效果能够有一个统一的刷新机制
+
+## window.requestIdleCallback 运行机制类似于setTimeout，会在浏览器空闲时期依次调用函数，可设置超时时间，目前对于浏览器的支持度很差
+
+## overscroll-behavior 属性用于解决连锁滚动问题或禁止浏览器自带的滚动效果，IE目前使用-ms-scroll-chaining代替
