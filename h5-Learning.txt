@@ -267,3 +267,5 @@ configurable: 目标属性是否可以被删除或是否可以再次修改特性
 ## overscroll-behavior 属性用于解决连锁滚动问题或禁止浏览器自带的滚动效果，IE目前使用-ms-scroll-chaining代替
 
 ## IndexedDB是浏览器的内置数据库，不同于WebSQL的是它更像是一个NoSQL，不同于localStorage的是其API都是异步操作类型
+
+## window.performance 监测网页和Web应用程序的性能（浏览器或静态资源），返回具体性能指标
