@@ -269,3 +269,5 @@ configurable: 目标属性是否可以被删除或是否可以再次修改特性
 ## IndexedDB是浏览器的内置数据库，不同于WebSQL的是它更像是一个NoSQL，不同于localStorage的是其API都是异步操作类型
 
 ## window.performance 监测网页和Web应用程序的性能（浏览器或静态资源），返回具体性能指标
+
+## 在移动端页面的input标签中加入capture属性可唤起设备的相机，摄像以及录音功能；加入accept属性表示直接打开系统文件目录
