@@ -258,7 +258,8 @@ configurable: 目标属性是否可以被删除或是否可以再次修改特性
 
 ## Element.getBoundingClientRect() 方法返回元素的大小及其相对于视口（当前窗口）的位置，浏览器兼容性很好
 
-## IntersectionObserver对象用于异步观察目标元素与祖先元素或视口的交集变化，不同于事件监听机制的是它不运行在主线程上，性能绝佳。详见 https://developer.mozilla.org/zh-CN/docs/Web/API/Intersection_Observer_API
+## IntersectionObserver对象用于异步观察目标元素与祖先元素或视口的交集变化，可用来做懒加载和滚动页面时的颜色渐变，不同于事件监听机制的是它不运行在主线程上，
+性能绝佳。详见 https://developer.mozilla.org/zh-CN/docs/Web/API/Intersection_Observer_API
 
 ## window.requestAnimationFrame 运行机制类似于setTimeout，主要用途是按帧对网页进行重绘，目的是为了让各种网页动画效果能够有一个统一的刷新机制
 
@@ -271,3 +272,15 @@ configurable: 目标属性是否可以被删除或是否可以再次修改特性
 ## window.performance 监测网页和Web应用程序的性能（浏览器或静态资源），返回具体性能指标
 
 ## 在移动端页面的input标签中加入capture属性可唤起设备的相机，摄像以及录音功能；加入accept属性表示直接打开系统文件目录
+
+## picture标签可实现响应式图片，但目前的浏览器兼容性不太好，可以使用picturefill.js解决
+
+## WebWorker相当于一个运行耗费大量资源的容器，它可以在UI线程外执行JS代码运算，不会阻塞UI线程，所以不会影响用户体验
+(当在 HTML 页面中执行脚本时，页面的状态是不可响应的，直到脚本已完成)
+
+## Immutable 一旦创建，就不能再被更改的数据；尽量复用内存，甚至以前使用的对象也可以再次被复用；可实现时间旅行功能；并发安全
+
+## http缓存头：( Cache-Control > ETag ) > ( Expires > Last-Modified )
+
+## JWT (即JSON Web Token)原理是服务器认证以后，生成一个经过签名算法加密的且包含过期时间的JSON对象发回给用户，以后用户与服务端通信的时候，都要发回这个JSON对象。
+除了使用session和cookie维持有状态的链接之外，也可以使用JWT，缺点是频繁变更权限时比较麻烦
