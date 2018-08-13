@@ -282,6 +282,9 @@ configurable: 目标属性是否可以被删除或是否可以再次修改特性
 
 ## http缓存头：( Cache-Control > ETag ) > ( Expires > Last-Modified )
 
+## http缓存分两种：强缓存和协商缓存。强缓存：状态码为200，由本地浏览器决定，刷新页面无效；协商缓存：状态码为304，由服务器决定，刷新页面有效。
+base64格式的图片缓存from memory
+
 ## JWT (即JSON Web Token)原理是服务器认证以后，生成一个经过签名算法加密的且包含过期时间的JSON对象发回给用户，以后用户与服务端通信的时候，都要发回这个JSON对象。
 除了使用session和cookie维持有状态的链接之外，也可以使用JWT，缺点是频繁变更权限时比较麻烦
 
