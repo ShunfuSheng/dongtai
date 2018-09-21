@@ -221,8 +221,6 @@ configurable: 目标属性是否可以被删除或是否可以再次修改特性
 
 ## document.queryCommandSupported()方法判断当前浏览器是否支持execCommand中的某一命令
 
-## contenteditable 属性规定时刻可编辑元素的内容
-
 ## getUserMedia对象用于开启设备的摄像头和话筒
 
 ## MediaRecorder对象用于在getUserMedia的基础上录制视频
@@ -293,3 +291,5 @@ base64格式的图片缓存from memory
 ## will-change样式 用于增强页面渲染性能，通过告知浏览器即将做一些动画或者变形的操作，然后浏览器提前做好GPU的工作；而3D transform也会启用GPU加速
 
 ## tabindex属性：1.使用 Tab 键时，设定可聚焦元素的切换顺序；2.使元素可聚焦，例如div元素默认无法获得焦点，但设置tabindex属性后就可以
+
+## jsfuck可以做到真正的代码混淆和加密，由于生成的代码很长，所以不适合加密大量代码，黑客注入常用
