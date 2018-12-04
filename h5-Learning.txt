@@ -295,3 +295,8 @@ base64格式的图片缓存from memory
 ## jsfuck可以做到真正的代码混淆和加密，由于生成的代码很长，所以不适合加密大量代码，黑客注入常用
 
 ## 马赛克效果：filter: blur(10px) brightness(80%) opacity(.8);
+
+## 浏览器每一个非空白tab页对应一个进程，主进程Browser进程主要负责页面管理及管理其他进程的创建和销毁，常驻线程包括：GUI渲染线程、JS引擎线程、事件
+触发线程、定时器触发线程、HTTP请求线程，其中GUI渲染线程和JS引擎线程互斥
+
+## 对于外域图片，浏览器允许画到canvas上，但是出于安全考虑，使用toDataURL或者toBlob的类似转换操作会报错，可以在img标签中加crossorigin=anonymous解决
