@@ -300,3 +300,9 @@ base64格式的图片缓存from memory
 触发线程、定时器触发线程、HTTP请求线程，其中GUI渲染线程和JS引擎线程互斥
 
 ## 对于外域图片，浏览器允许画到canvas上，但是出于安全考虑，使用toDataURL或者toBlob的类似转换操作会报错，可以在img标签中加crossorigin=anonymous解决
+
+## window.addEventListener('error', fun, true)可全局捕获静态资源加载的异常
+
+## unhandledrejection 全局监听事件，用来捕获所有异步抛出的异常
+
+## 浏览器不会对try-catch起来的异常进行跨域拦截，因此可以通过包装原生方法解决跨域问题
