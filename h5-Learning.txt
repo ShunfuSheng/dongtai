@@ -301,6 +301,8 @@ base64格式的图片缓存from memory
 
 ## 对于外域图片，浏览器允许画到canvas上，但是出于安全考虑，使用toDataURL或者toBlob的类似转换操作会报错，可以在img标签中加crossorigin=anonymous解决
 
+## img标签加crossorigin=anonymous的条件是图片路径必须是在同域下，否则会报跨域错误导致图片无法加载
+
 ## window.addEventListener('error', fun, true)可全局捕获静态资源加载的异常
 
 ## unhandledrejection 全局监听事件，用来捕获所有异步抛出的异常
