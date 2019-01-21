@@ -252,6 +252,8 @@ configurable: 目标属性是否可以被删除或是否可以再次修改特性
 
 ## 前端反盗链的两种方法：1.在head内添加一个meta标签（这种方法兼容性好），<meta name="referrer" content="never" />；2.在资源加载标签如img中添加referrerPolicy="no-referrer"属性
 
+## domain: 通过设置document.domain可以实现同一顶级域名网页之间的跨域访问
+
 ## position:sticky 粘性定位是相对定位和固定定位的混合，元素在跨越特定阈值前为相对定位，之后为固定定位
 
 ## Element.getBoundingClientRect() 方法返回元素的大小及其相对于视口（当前窗口）的位置，浏览器兼容性很好
