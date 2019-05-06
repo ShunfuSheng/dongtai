@@ -1,0 +1,19 @@
+# 检测项目依赖中的漏洞并自动安装需要更新的有漏洞的依赖，而不必再自己进行跟踪和修复
+npm audit fix
+
+
+# 更新某个包到最新版本
+npm i moment@latest --save
+
+
+# 检查并更新所有依赖包到最新版本
+npm-check -u
+
+
+# 查看并切换镜像源
+nrm ls
+nrm use taobao
+
+
+# 清理下载缓存
+npm cache clean --force
