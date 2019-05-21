@@ -1,3 +1,12 @@
+# npm使用 a.b.c 的版本号来管理安装模块
+a: 为达版本号，有重大api改变，一般不向下兼容;
+b: 为小版本号，新增功能，向下兼容;
+c: 为补丁号，通常修复一些bug;
+npm安装模块的时候允许使用一些特殊符号表示安装的版本范围，如：
+    ~a.b.c :    取最新的c的版本号值，a与b保持不变
+    ^a.b.c :    取b和c均为最新版本号，a保持不变
+
+
 # 检测项目依赖中的漏洞并自动安装需要更新的有漏洞的依赖，而不必再自己进行跟踪和修复
 npm audit fix
 
@@ -17,3 +26,9 @@ nrm use taobao
 
 # 清理下载缓存
 npm cache clean --force
+
+
+# 查看模块版本号
+查看此模块所有版本号：npm view <packageName> versions
+查看此模块最新版本号：npm view <packageName> version
+查看模块的所有信息：  npm info <packageName>
