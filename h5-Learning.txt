@@ -1,11 +1,14 @@
 ## 设置鼠标指针放到所有div上时的样式
-div:nth-child(n):hover{ }
+div:nth-child(n):hover{}
+
 
 ## scale指缩放，一个值指的是同时缩放，两个值指的是水平和垂直缩放
 transform: scale(1.5, 1.5)
 
+
 ## rotate指旋转，deg指的是旋转的度数
 transform: rotate(-15deg)
+
 
 ## transition属性定义动画的过渡过程，ease-in-out指的是速度曲线，由慢到快再到慢
 transition: name 2s ease-in-out
@@ -13,87 +16,120 @@ transition: name 2s ease-in-out
 ## 设置边框四个角的角度，50%为一个圆
 border-radius: 50%
 
+
 ## 设置行高，可用于单行文本的垂直居中
 line-height: 150px
 
+
 ## <main>标签规定了文档的主要内容，它里面的内容对于文档来说是唯一的
+
 
 ## <section>标签定义了文档的节或段
 
+
 ## js中自定义的函数要在此函数外部调用才能生效
 
+
 ## 注意css中的优先级关系，有时可能想要的css样式会被高优先级的样式覆盖
+
 
 ## 设置多张背景图片共存时的混合模式
 background-blend-mode: multiply
 
+
 ## 子元素如果设置为绝对定位，那么它的直接父元素要设置为相对定位，否则绝对定位的参考点为body元素
+
 
 ## skew定义2D旋转，rotate可定义3D旋转
 transform: skew(10deg,20deg)
 
+
 ## shadow阴影：1.x方向的偏移量。 2.y方向的偏移量。 3.阴影的模糊程度。 4.阴影的大小，正数是阴影变大，负数是阴影变小。 5.阴影的颜色
 box-shadow: 10px 10px 5px 4px yellow
 
+
 ## css样式中宽和高属性如果设置为百分比，则是相对于父元素来讲
 
+
 ## 在html标签中，分为行元素和块元素，每个块元素独占一行，行元素则接在后面不会另起一行，并且行元素不可设置宽和高属性，可以通过display的方法改变元素的性质
+
 
 ## 设置元素的层级关系，z-index是一个相对的概念，即在处理子元素的层级关系时先设置层级为0给父元素
 z-index: -1
 
+
 # linear-gradient值设定颜色的线性渐变
 background: linear-gradient(to bottom, rgb(13,104,188), rgb(114,173,224))
+
 
 ## 布局设为弹性布局，设置了此布局后，所有子元素不是浮动就是块，再无行内元素之说；子元素的float、clear、vertical-align属性将失效
 display: flex
 
+
 ## 将特定字符替换成空字符，即删掉它
 string.replace('℃', '')
+
 
 ## js和jquery中获取浏览器可见区域的宽度和高度
 document.documentElement.clientHeight	  或	 $(window).height()
 document.documentElement.clientWidth	  或	 $(window).width()
 
+
 ## 设置元素与屏幕外的观察者的视线距离，要设在呈现3D效果元素的父元素
 perspective: 900px
+
 
 ## 接在perspective属性之后，没有设置perspective则此属性无效，设置与观察者的视线角度，此属性的3D呈现效果会随着父元素容器的大小变化
 perspective-origin: 30% 80%
 
+
 ## 设置旋转轴，这里设置为元素左边的Y轴
 transform-origin: 0 0 0
+
 
 ## 打开子元素的3D效果限制，允许子元素出现3D视图，即保留空间位置
 transform-style: preserve-3d
 
+
 ## 一个类中不带参数的内部成员方法只能调用内部成员属性，可以为这个类新建一个属性并赋值，实现调用外部变量。
+
 
 ## 设置自定义鼠标指针形状，后面的备用形状一定要写
 cursor: url(...),auto
 
+
 ## 规定动画在播放之前或之后，其动画效果是否可见，both表示开始和结束状态都停留
 animation-fill-mode: both
 
+
 ## css中允许多个class，第一次赋值class样式才会有动画效果，之后的二次赋名没有什么作用，除非变动class的样式或者先移除再赋值。
 
+
 ## time为时间标签，定义时间，但大多浏览器尚不支持
+
 
 ## progress为进度条标签，value表示播放量占总量的比例
 <progress value='0'></progress>
 
+
 ## nth-child()选择器选取父元素的第n个子元素，与类型无关；odd和even参数代表选择奇偶数
 
+
 ## 相对布局元素的子元素最好不要溢出父元素，否则可能会影响到其他相对布局元素的子元素
+
 
 ## q标签表示带有引号的文本，引号无法选取，可以嵌套，可以通过quotes属性设置引号类型
 quotes: '『' '』' '┏' '┙';
 
+
 ## figure标签规定独立的流内容(图像、图表、照片、代码等等)，figcaption标签内置于figure标签中，用于定义figure元素的标题。figure为块元素，宽度width等于父元素的宽度。
+
 
 ## 语义化标签code，用于表示计算机源码或其他机器可阅读的文本内容
 
+
 ## pre元素定义预格式化文本，被包围在pre元素中的文本通常会保留空格和换行符，而文本也会呈现为等宽字体。
+
 
 ## ol标签定义有序列表，默认会在li前添加序号；dl表示带描述的列表
 
@@ -101,8 +137,10 @@ quotes: '『' '』' '┏' '┙';
 ## conter-reset属性设置某个选择器出现次数的计数器的值，设置在祖先元素，默认为0，可以在第二个参数设置初始值
 counter-reset: sheng -1;
 
+
 ## counter-increment设置每次出现的计数器增量并且自增一次，默认增量为1，可以在第二个参数设置增量
 counter-increment: sheng;
+
 
 ## 应用计数器变量
 content: counter(h1)' ';
@@ -110,14 +148,19 @@ content: counter(h1)' ';
 
 ## a标签中，使用属性href="#id"可以实现页面内跳转，而title属性当鼠标放上去时给我们的提示作用
 
+
 ## hx有各自的文字大小还有默认的上下边距及加粗效果，搜索引擎搜的通常是h1
+
 
 ## css中选择器不起作用可能是因为将一个块元素放置到行元素中了
 
+
 ## 使用position: fiexed可以起到固定位置的作用，但定宽居中失败，因为原先的元素占有的位置被其它元素占有，fiexd元素位于最高层，可以嵌套一个子元素同时实现固定位置和定宽居中。
+
 
 ## word-wrap属性允许长单词或URL地址换行到下一行，它能直接折断单词并强制换行
 word-wrap: break-word
+
 
 ## white-space属性指定元素内的空白怎样处理:
    nowrap: 值规定段落中的文本不进行换行
@@ -126,37 +169,54 @@ word-wrap: break-word
 ## resize属性允许用户手动调整元素的尺寸，前提是要设置元素的overflow属性，因为如果拖动过程中如果发生内容溢出则需要作出相应处理
 resize: both
 
+
 ## 中文字符可以在任意两个字之间换行，所以通常会出现纵向滚动条，而英文单词默认不会在单词内部换行，所以如果写一个长单词则不会出现换行,通常出现横向滚动条
+
 
 ## outline是border外的东西，是边框的边框，常用于取消按钮的外边框
 
+
 ## 浮动布局float和相对布局relative可以共用，relative会以浮动后的位置作为参照物，不管谁先谁后，结果都一样
+
 
 ## 出现浮动布局，固定定位，绝对定位时，元素脱离原有的布局流，会发生：1.块级元素不占整行宽度；2.元素原有的位置被占据，但如果是文本的话，还是会挤开其他元素的文本
 
+
 ## 有时候会同一行的元素会出现错位，可能是文本基线对齐方式引发的问题
+
 
 ## 行内块元素无法进行定宽居中，但可以进行text-align: center的子元素居中；固定宽高的块元素无法在父元素中进行text-align: center，但可以定宽居中
 
+
 ## 行高只对行内元素和字符有用，对行内块和块元素没用
+
 
 ## 行内块元素没有外边距重叠现象，行内元素可以设置外边距margin和内边距padding，但对上下无效
 
+
 ## 样式继承：通常跟文本有关的样式和跟列表有关的样式是可以继承的，而跟盒模型之类有关的样式通常是不能继承的，部分标签内部自带了一些样式，需要在这些标签中覆盖掉原值，有些元素内部自带了相对字体大小，如h1，small等，它们在继承父类样式的时候font-size需要重新计算，当然也可以直接强制改变其样式
+
 
 ## resize的设置使用户能自己拖动容器控制大小，但前提是overflow不为默认值
 
+
 ## inline-block和inline-table的区别是前者单元格不会自动伸缩，内容有多大，td就只有多大；后者会自动伸缩，从而充满整个table
+
 
 ## 伪类选择器before和after都可以添加图片，也可以进行基线对齐，但无法对齐到middle，可以通过设置行高来解决这个问题
 
+
 ## 块级多层嵌套时，最外层设置“高度”后，无法通过设置100%来一层一层地往外撑开直至所有块元素达到最外层的宽度或高度，且此处的百分数没有参照值，无意义；但如果是“宽度”则可以
+
 
 ## td(或display:table-cell)对高度敏感，可使用vertical-align来设置子元素的垂直居中
 
+
 ## div等块元素无法包在p标签里面，会解析成两个p，不管你把div重设成什么样的元素
 
+
 ## window对象有个name属性，该属性有个特征：即在一个窗口(window)的生命周期内,窗口载入的所有的页面都是共享一个window.name的，每个页面对window.name都有读写的权限，window.name是持久存在一个窗口载入过的所有页面中的，并不会因新页面的载入而进行重置。
+
 
 ## document.compatMode用来判断当前浏览器采用的渲染方式，只有两个值：BackCompat和CSS1Compat。当document.compatMode等于BackCompat时，浏览器客户区宽度是document.body.clientWidth；当document.compatMode等于BackCompat时，浏览器客户区宽度是document.body.clientWidth
 
@@ -169,42 +229,60 @@ resize: both
 ## crm: 客户关系管理（Customer relationship manager），其实就是几张管理客户信息的数据表
 
 
+
 附加：
 OPTIONS请求方法的主要用途有两个：
 1、获取服务器支持的HTTP请求方法；也是黑客经常使用的方法。
 2、用来检查服务器的性能。例如：AJAX进行跨域请求时的预检，需要向另外一个域名的资源发送一个HTTP OPTIONS请求头，用以判断实际发送的请求是否安全。
 
+
 ## select()方法全选输入框中的内容并使其处于高亮状态
+
 
 ## setSelectionRange()方法选中输入框中的部分内容并使其处于高亮状态
 
+
 ## contenteditable节点属性表示该元素内容可编辑
+
 
 ## window.getSelection()方法用于屏幕取词和获取鼠标光标的位置
 
+
 ## document.selection方法用于屏幕取词和获取鼠标光标的位置（IE下有用）
+
 
 ## removeAllRanges()方法用于取消处于选中状态的文字
 
+
 ## addRange()方法用于手动添加文字到选中状态中
+
 
 ## createRange()方法用户创建一个区域，隔离于DOM文档
 
+
 ## selectNode(node)方法把整个node节点的信息，包括子节点中的内容填充到范围range内
+
 
 ## selectNodeContents(node)方法把node节点的子节点信息填充到范围range内
 
+
 ## extractContents()方法从文档中移除范围选区。这个方法的返回值是移除的片段，利用这个返回值，可以把这个片段插入到页面的其他地方
+
 
 ## deleteContents()方法从文档中彻底删除范围所包含的内容
 
+
 ## matches('css selector')用于判断元素是否为css选择器选中的内容
+
 
 ## nodeName：用于获取元素的标签类型
 
+
 ## Object.prototype.toString.call() 获取引用类型的具体数据类型
 
+
 ## 可枚举性：如果一个属性的enumerable为false，可以通过打点方式直接获取该属性，但是一般的遍历操作都无法获取该属性
+
 
 ## Object.defineProperty()用于给对象新增键值对或修改原有的value属性，第一个参数为对象本身，第二个参数表示key值
 第三个参数表示value的属性，是一个对象，包含4个属性：
@@ -213,108 +291,161 @@ writable: 值是否可以重写
 enumerable: 目标属性是否可以被枚举
 configurable: 目标属性是否可以被删除或是否可以再次修改特性
 
+
 ## Symbol是ES6引入的一种数据类型，与字符串类似，可用于对象的key值，它表示独一无二的值
+
 
 ## 'key' in obj 用于判断'key'值是否为obj中的key值
 
+
 ## document.execCommand()方法让js能使用命令行的方式操作文档，包括打开，另存为，全选，对选中的内容进行编辑等功能
+
 
 ## document.queryCommandSupported()方法判断当前浏览器是否支持execCommand中的某一命令
 
+
 ## getUserMedia对象用于开启设备的摄像头和话筒
+
 
 ## MediaRecorder对象用于在getUserMedia的基础上录制视频
 
+
 ## webRTC用于实现点对点视频通信
+
 
 ## FileReader 用来读取input标签中的文件内容，常用来做图片上传的预览和文件传输
 
+
 ## FormData对象用于创建或者获取表单数据，可以独立于表单使用
+
 
 ## DocumentFragment 接口表示一个没有父级文件的最小文档对象，它被当做一个轻量版的Document使用，提高渲染性能
 
+
 ## Blob是一种js对象类型，blob 存储着大量的二进制数据，并且 blob 的 size 和 type 属性，都会被 file 对象所继承，它可以用来做大文件分割传输
+
 
 ## text-align:justify 设置单行文本等间距分布
 
+
 ## 在使用css3 transtion做动画效果时，优先选择transform，尽量不要使用height，width，margin和padding
+
 
 ## 使用window.open()并传入外部url参数时，主流浏览器可以正常打开窗口并获取新窗口的window对象；而IE可以正常打开窗口但不能获取window对象。
 不传入外部url时，都可以获取window，没有任何区别。
 
+
 ## eval 可以把简单的js字符串转化为js代码并且执行它；复杂的js字符串可以用new Function()实现转化
+
 
 ## hBuilder + html5PLUS + native.js实现基于webView的hybird混合开发，其内部使用phoneGap打包；react-native实现js转化的原生开发，类似于Weex + vue
 
+
 ## images.weserv.nl：一个图片请求代理服务，可以解决反盗链问题，还可以为图片做各种预处理，比如指定大小、裁剪、滤镜等。但是在国内访问速度有点而且有被墙的风险
+
 
 ## referrer除了可以解决反盗链问题，也可以用来解决http和https之间的资源访问问题
 
+
 ## 前端反盗链的两种方法：1.在head内添加一个meta标签（这种方法兼容性好），<meta name="referrer" content="never" />；2.在资源加载标签如img中添加referrerPolicy="no-referrer"属性
+
 
 ## domain: 通过设置document.domain可以实现同一顶级域名网页之间的跨域访问
 
+
 ## position:sticky 粘性定位是相对定位和固定定位的混合，元素在跨越特定阈值前为相对定位，之后为固定定位
 
+
 ## Element.getBoundingClientRect() 方法返回元素的大小及其相对于视口（当前窗口）的位置，浏览器兼容性很好
+
 
 ## IntersectionObserver对象用于异步观察目标元素与祖先元素或视口的交集变化，可用来做懒加载和滚动页面时的颜色渐变，不同于事件监听机制的是它不运行在主线程上，
 性能绝佳。详见 https://developer.mozilla.org/zh-CN/docs/Web/API/Intersection_Observer_API
 
+
 ## window.requestAnimationFrame 运行机制类似于setTimeout，主要用途是按帧对网页进行重绘，目的是为了让各种网页动画效果能够有一个统一的刷新机制
+
 
 ## window.requestIdleCallback 运行机制类似于setTimeout，会在浏览器空闲时期依次调用函数，可设置超时时间，目前对于浏览器的支持度很差
 
+
 ## overscroll-behavior 属性用于解决连锁滚动问题或禁止浏览器自带的滚动效果，IE目前使用-ms-scroll-chaining代替
+
 
 ## IndexedDB是浏览器的内置数据库，不同于WebSQL的是它更像是一个NoSQL，不同于localStorage的是其API都是异步操作类型
 
+
 ## window.performance 监测网页和Web应用程序的性能（浏览器或静态资源），返回具体性能指标
+
 
 ## 在移动端页面的input标签中加入capture属性可唤起设备的相机，摄像以及录音功能；加入accept属性表示直接打开系统文件目录
 
+
 ## picture标签可实现响应式图片，但目前的浏览器兼容性不太好，可以使用picturefill.js解决
+
 
 ## WebWorker相当于一个运行耗费大量资源的容器，它可以在UI线程外执行JS代码运算，不会阻塞UI线程，所以不会影响用户体验
 (当在 HTML 页面中执行脚本时，页面的状态是不可响应的，直到脚本已完成)
 
+
 ## Immutable 一旦创建，就不能再被更改的数据；尽量复用内存，甚至以前使用的对象也可以再次被复用；可实现时间旅行功能；并发安全
 
+
 ## http缓存头：( Cache-Control > ETag ) > ( Expires > Last-Modified )
+
 
 ## http缓存分两种：强缓存和协商缓存。强缓存：状态码为200，由本地浏览器决定，刷新页面无效；协商缓存：状态码为304，由服务器决定，刷新页面有效。
 base64格式的图片缓存from memory
 
+
 ## JWT (即JSON Web Token)原理是服务器认证以后，生成一个经过签名算法加密的且包含过期时间的JSON对象发回给用户，以后用户与服务端通信的时候，都要发回这个JSON对象。
 除了使用session和cookie维持有状态的链接之外，也可以使用JWT，缺点是频繁变更权限时比较麻烦
 
+
 ## ~~操作用于将所有类型转化为有意义的整型，并且丢掉小数部分
+
 
 ## will-change样式 用于增强页面渲染性能，通过告知浏览器即将做一些动画或者变形的操作，然后浏览器提前做好GPU的工作；而3D transform也会启用GPU加速
 
+
 ## tabindex属性：1.使用 Tab 键时，设定可聚焦元素的切换顺序；2.使元素可聚焦，例如div元素默认无法获得焦点，但设置tabindex属性后就可以
+
 
 ## jsfuck可以做到真正的代码混淆和加密，由于生成的代码很长，所以不适合加密大量代码，黑客注入常用
 
+
 ## 马赛克效果：filter: blur(10px) brightness(80%) opacity(.8);
+
 
 ## 浏览器每一个非空白tab页对应一个进程，主进程Browser进程主要负责页面管理及管理其他进程的创建和销毁，常驻线程包括：GUI渲染线程、JS引擎线程、事件
 触发线程、定时器触发线程、HTTP请求线程，其中GUI渲染线程和JS引擎线程互斥
 
+
 ## 对于外域图片，浏览器允许画到canvas上，但是出于安全考虑，使用toDataURL或者toBlob的类似转换操作会报错，可以在img标签中加crossorigin=anonymous解决
+
 
 ## img标签加crossorigin=anonymous的条件是图片路径必须是在同域下，否则会报跨域错误导致图片无法加载
 
+
 ## window.addEventListener('error', fun, true)可全局捕获静态资源加载的异常
+
 
 ## unhandledrejection 全局监听事件，用来捕获所有异步抛出的异常
 
+
 ## 浏览器不会对try-catch起来的异常进行跨域拦截，因此可以通过包装原生方法解决跨域问题
+
 
 ## SQL注入本质：数据和代码未分离，即数据当做了代码来执行。解决方式可通过参数化查询
 
-## WebAssembly使得以各种语言编写的代码(如c/c++)都可以以接近原生的速度在Web中运行
+
+## WebAssembly使得以各种语言编写的代码(如c/c++)都可以以接近原生的速度在Web中运行，细节参考：https://www.jianshu.com/p/bff8aa23fe4d
+
+
+## chrome浏览器不同版本的内核所承受的webAssembly最大分配内存不同，将变量销毁分配的内存依然存在(这种情况针对其他引用类型也存在一样的问题)，除非F5刷新或关闭当前窗口，多个窗口享有的webAssembly最大分配内存总额固定，即第一个窗口满了第二个窗口再分配会报错，firefox没有上述这些情况
+
 
 ## elementFromPoint方法：返回当前文档上处于指定坐标位置最顶层的元素, 坐标是相对于包含该文档的浏览器窗口的左上角为原点来计算的，浏览器兼容性很好
+
 
 ## pointer-events属性：指定在某种情况下某个特定的图形元素可以成为鼠标事件的target，值为none可以实现点击穿透
