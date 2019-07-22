@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<!-- saved from url=(0106)https://srtian96.gitee.io/blog/2018/06/01/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E5%8E%9F%E7%90%86/ -->
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#222">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <link href="./jquery.fancybox.css" rel="stylesheet" type="text/css">
+  <link href="./css" rel="stylesheet" type="text/css">
+  <link href="./font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="./main.css" rel="stylesheet" type="text/css">
+  <link rel="apple-touch-icon" sizes="180x180"
+    href="https://srtian96.gitee.io/blog/images/apple-touch-icon-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="32x32"
+    href="https://srtian96.gitee.io/blog/images/favicon-32x32-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="16x16"
+    href="https://srtian96.gitee.io/blog/images/favicon-16x16-next.png?v=5.1.4">
+  <link rel="mask-icon" href="https://srtian96.gitee.io/blog/images/logo.svg?v=5.1.4" color="#222">
+  <meta name="keywords" content="浏览器,页面渲染,">
+  <meta name="description"
+    content="一、浏览器如何渲染网页要了解浏览器渲染页面的过程，首先得知道一个名词——关键路径渲染。关键渲染路径（Critical Rendering Path）是指与当前用户操作有关的内容。例如用户在浏览器中打开一个页面，其中页面所显示的东西就是当前用户操作相关的内容，也就是浏览器从服务器那收到的HTML,CSS,JavaScript等相关资源，然后经过一系列处理后渲染出来的web页面。 而浏览器渲染的过程主">
+  <meta name="keywords" content="浏览器,页面渲染">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="浏览器渲染原理与过程">
+  <meta property="og:url" content="http://srtian96.gitee.io/blog/2018/06/01/浏览器渲染原理/index.html">
+  <meta property="og:site_name" content="Srtian&#39;Blog">
+  <meta property="og:description"
+    content="一、浏览器如何渲染网页要了解浏览器渲染页面的过程，首先得知道一个名词——关键路径渲染。关键渲染路径（Critical Rendering Path）是指与当前用户操作有关的内容。例如用户在浏览器中打开一个页面，其中页面所显示的东西就是当前用户操作相关的内容，也就是浏览器从服务器那收到的HTML,CSS,JavaScript等相关资源，然后经过一系列处理后渲染出来的web页面。 而浏览器渲染的过程主">
+  <meta property="og:locale" content="zh-Hans">
+  <meta property="og:image"
+    content="https://user-gold-cdn.xitu.io/2018/2/22/161bb3c9b220f8cb?imageView2/0/w/1280/h/960/ignore-error/1">
+  <meta property="og:updated_time" content="2018-06-22T08:22:35.601Z">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="浏览器渲染原理与过程">
+  <meta name="twitter:description"
+    content="一、浏览器如何渲染网页要了解浏览器渲染页面的过程，首先得知道一个名词——关键路径渲染。关键渲染路径（Critical Rendering Path）是指与当前用户操作有关的内容。例如用户在浏览器中打开一个页面，其中页面所显示的东西就是当前用户操作相关的内容，也就是浏览器从服务器那收到的HTML,CSS,JavaScript等相关资源，然后经过一系列处理后渲染出来的web页面。 而浏览器渲染的过程主">
+  <meta name="twitter:image"
+    content="https://user-gold-cdn.xitu.io/2018/2/22/161bb3c9b220f8cb?imageView2/0/w/1280/h/960/ignore-error/1">
+  <link rel="canonical"
+    href="http://srtian96.gitee.io/blog/2018/06/01/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E5%8E%9F%E7%90%86/">
+  <title>浏览器渲染原理与过程 | Srtian'Blog</title>
+  <style type="text/css">
+    .fancybox-margin {
+      margin-right: 17px;
+    }
+  </style>
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            <div id="posts" class="posts-expand">
+              <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+                <div class="post-block" style="opacity: 1; display: block;">
+                  <link itemprop="mainEntityOfPage"
+                    href="http://srtian96.gitee.io/blog/blog/2018/06/01/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E5%8E%9F%E7%90%86/">
+                  <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                    <meta itemprop="name" content="Srtian">
+                    <meta itemprop="description" content="">
+                    <meta itemprop="image" content="/blog/images/avatar.jpg">
+                  </span>
+                  <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+                    <meta itemprop="name" content="Srtian&#39;Blog">
+                  </span>
+                  <header class="post-header" style="opacity: 1; display: block; transform: translateY(0px);">
+                    <h1 class="post-title" itemprop="name headline">浏览器渲染原理与过程</h1>
+                  </header>
+                  <div class="post-body" itemprop="articleBody"
+                    style="opacity: 1; display: block; transform: translateY(0px);">
+                    <h3 id="一、浏览器如何渲染网页"><a
+                        href="https://srtian96.gitee.io/blog/2018/06/01/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E5%8E%9F%E7%90%86/#%E4%B8%80%E3%80%81%E6%B5%8F%E8%A7%88%E5%99%A8%E5%A6%82%E4%BD%95%E6%B8%B2%E6%9F%93%E7%BD%91%E9%A1%B5"
+                        class="headerlink" title="一、浏览器如何渲染网页"></a>一、浏览器如何渲染网页</h3>
+                    <p>要了解浏览器渲染页面的过程，首先得知道一个名词——关键路径渲染。<strong>关键渲染路径</strong>（Critical Rendering
+                      Path）是指与当前用户操作有关的内容。例如用户在浏览器中打开一个页面，其中页面所显示的东西就是当前用户操作相关的内容，也就是浏览器从服务器那收到的HTML,CSS,JavaScript等相关资源，然后经过一系列处理后渲染出来的web页面。
+                    </p>
+                    <p>而浏览器渲染的过程主要包括以下五步：</p>
+                    <ul>
+                      <li>浏览器将获取的HTML文档并解析成DOM树。</li>
+                      <li>处理CSS标记，构成层叠样式表模型CSSOM(CSS Object Model)。</li>
+                      <li>将DOM和CSSOM合并为渲染树(rendering tree)将会被创建，代表一系列将被渲染的对象。</li>
+                      <li>渲染树的每个元素包含的内容都是计算过的，它被称之为布局layout。浏览器使用一种流式处理的方法，只需要一次pass绘制操作就可以布局所有的元素。</li>
+                      <li>将渲染树的各个节点绘制到屏幕上，这一步被称为绘制painting.</li>
+                    </ul>
+                    <p>
+                      需要注意的是，以上五个步骤并不一定一次性顺序完成，比如DOM或CSSOM被修改时，亦或是哪个过程会重复执行，这样才能计算出哪些像素需要在屏幕上进行重新渲染。而在实际情况中，JavaScript和CSS的某些操作往往会多次修改DOM或者CSSOM。
+                    </p>
+                    <p>下面我们就来详细的了解一下这几个过程及需要注意的事项。</p>
+                    <h3 id="二、浏览器渲染网页的具体流程"><a
+                        href="https://srtian96.gitee.io/blog/2018/06/01/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E5%8E%9F%E7%90%86/#%E4%BA%8C%E3%80%81%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E7%BD%91%E9%A1%B5%E7%9A%84%E5%85%B7%E4%BD%93%E6%B5%81%E7%A8%8B"
+                        class="headerlink" title="二、浏览器渲染网页的具体流程"></a>二、浏览器渲染网页的具体流程</h3>
+                    <h4 id="2-1-构建DOM树"><a
+                        href="https://srtian96.gitee.io/blog/2018/06/01/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E5%8E%9F%E7%90%86/#2-1-%E6%9E%84%E5%BB%BADOM%E6%A0%91"
+                        class="headerlink" title="2.1 构建DOM树"></a>2.1 构建DOM树</h4>
+                    <p>当浏览器客户端从服务器那接受到HTML文档后，就会遍历文档节点然后生成DOM树，DOM树结构和HTML标签一一对应。需要注意记下几点：</p>
+                    <ol>
+                      <li>DOM树在构建的过程中可能会被CSS和JS的加载而执行阻塞。（这在后面会详细介绍。）</li>
+                      <li>display:none 的元素也会在DOM树中。</li>
+                      <li>注释也会在DOM树中</li>
+                      <li>script标签会在DOM树中</li>
+                    </ol>
+                    <h4 id="2-2-CSS解析"><a
+                        href="https://srtian96.gitee.io/blog/2018/06/01/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E5%8E%9F%E7%90%86/#2-2-CSS%E8%A7%A3%E6%9E%90"
+                        class="headerlink" title="2.2 CSS解析"></a>2.2 CSS解析</h4>
+                    <p>
+                      浏览器会解析CSS文件并生成CSS规则树，在过程中，每个CSS文件都会被分析成StyleSheet对象，每个对象都包括CSS规则，CSS规则对象包括对应的选择器和声明对象以及其他对象。<br>在这个过程需要注意的是：
+                    </p>
+                    <ul>
+                      <li>CSS解析可以与DOM解析同进行。</li>
+                      <li>CSS解析与script的执行互斥 。</li>
+                      <li>在Webkit内核中进行了script执行优化，只有在JS访问CSS时才会发生互斥。</li>
+                    </ul>
+                    <h4 id="2-3-构建渲染树（Rendr-tree-construction）"><a
+                        href="https://srtian96.gitee.io/blog/2018/06/01/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E5%8E%9F%E7%90%86/#2-3-%E6%9E%84%E5%BB%BA%E6%B8%B2%E6%9F%93%E6%A0%91%EF%BC%88Rendr-tree-construction%EF%BC%89"
+                        class="headerlink" title="2.3 构建渲染树（Rendr tree construction）"></a>2.3 构建渲染树（Rendr tree
+                      construction）</h4>
+                    <p>通过DOM树和CSS规则树，浏览器就可以通过它两构建渲染树了。浏览器会先从DOM树的根节点开始遍历每个可见节点，让后对每个可见节点找到适配的CSS样式规则并应用。具体的规则有以下几点需要注意：
+                    </p>
+                    <ul>
+                      <li>Render Tree和DOM Tree不完全对应。</li>
+                      <li>display: none的元素不在Render Tree中</li>
+                      <li>visibility: hidden的元素在Render Tree中</li>
+                    </ul>
+                    <h4 id="2-4-渲染树布局-layout-of-the-render-tree"><a
+                        href="https://srtian96.gitee.io/blog/2018/06/01/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E5%8E%9F%E7%90%86/#2-4-%E6%B8%B2%E6%9F%93%E6%A0%91%E5%B8%83%E5%B1%80-layout-of-the-render-tree"
+                        class="headerlink" title="2.4 渲染树布局(layout of the render tree)"></a>2.4 渲染树布局(layout of the
+                      render tree)</h4>
+                    <p>布局阶段会从渲染树的更节点开始遍历，由于渲染树的每个节点都是一个Render
+                      Object对象，包含宽高，位置，背景色等样式信息。所以浏览器就可以通过这些样式信息来确定每个节点对象在页面上的确切大小和位置，布局阶段的输出就是我们常说的盒子模型，它会精确地捕获每个元素在屏幕内的确切位置与大小。需要注意的是：
+                    </p>
+                    <ul>
+                      <li>float元素，absoulte元素，fixed元素会发生位置偏移。</li>
+                      <li>我们常说的脱离文档流，其实就是脱离Render Tree。</li>
+                    </ul>
+                    <h4 id="2-5-渲染树绘制（Painting-the-render-tree）"><a
+                        href="https://srtian96.gitee.io/blog/2018/06/01/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E5%8E%9F%E7%90%86/#2-5-%E6%B8%B2%E6%9F%93%E6%A0%91%E7%BB%98%E5%88%B6%EF%BC%88Painting-the-render-tree%EF%BC%89"
+                        class="headerlink" title="2.5 渲染树绘制（Painting the render tree）"></a>2.5 渲染树绘制（Painting the render
+                      tree）</h4>
+                    <p>在绘制阶段，浏览器会遍历渲染树，调用渲染器的paint()方法在屏幕上显示其内容。渲染树的绘制工作是由浏览器的UI后端组件完成的。</p>
+                    <h3 id="三、浏览器渲染网页的那些事儿"><a
+                        href="https://srtian96.gitee.io/blog/2018/06/01/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E5%8E%9F%E7%90%86/#%E4%B8%89%E3%80%81%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E7%BD%91%E9%A1%B5%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF"
+                        class="headerlink" title="三、浏览器渲染网页的那些事儿"></a>三、浏览器渲染网页的那些事儿</h3>
+                    <h4 id="3-1-阻塞渲染"><a
+                        href="https://srtian96.gitee.io/blog/2018/06/01/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E5%8E%9F%E7%90%86/#3-1-%E9%98%BB%E5%A1%9E%E6%B8%B2%E6%9F%93"
+                        class="headerlink" title="3.1 阻塞渲染"></a>3.1 阻塞渲染</h4>
+                    <p>
+                      前面我们有提到这方面的问题，说到资源的阻塞我们清楚的是，现代浏览器总是并行加载自语言。例如当HTML解析器被脚本阻塞时，解析器虽然会停止构建DOM，但仍然会辨识该脚本后面的资源，并进行预加载。且由于以下两点。浏览器会延迟
+                      JavaScript 的执行和 DOM 构建：</p>
+                    <ul>
+                      <li>CSS 被默认被视为阻塞渲染的资源，因此浏览器将在 CSSOM 构建完毕前不会渲染任何已处理的内容。</li>
+                      <li>JavaScript 不仅可以读取和修改 DOM 属性，还可以读取和修改 CSSOM 属性，因此CSS解析与script的执行互斥。</li>
+                    </ul>
+                    <p>正是由于以上这些原因，script标签的位置很重要我们在实际开发中应该尽量坚持以下两个原则：</p>
+                    <ul>
+                      <li>在引入顺序上，CSS 资源先于 JavaScript 资源。</li>
+                      <li>JavaScript 应尽量少的去影响 DOM 的构建。</li>
+                    </ul>
+                    <h4 id="3-2-回流和重绘（reflow和repaint）"><a
+                        href="https://srtian96.gitee.io/blog/2018/06/01/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E5%8E%9F%E7%90%86/#3-2-%E5%9B%9E%E6%B5%81%E5%92%8C%E9%87%8D%E7%BB%98%EF%BC%88reflow%E5%92%8Crepaint%EF%BC%89"
+                        class="headerlink" title="3.2 回流和重绘（reflow和repaint）"></a>3.2 回流和重绘（reflow和repaint）</h4>
+                    <p>我们都知道HTML默认是流式布局的，但CSS和JS会打破这种布局，改变DOM的外观样式以及大小和位置。因此我们就需要知道两个概念:</p>
+                    <ul>
+                      <li>reflow（回流）：当浏览器发现某个部分发生了变化从而影响了布局，这个时候就需要倒回去重新渲染，大家称这个回退的过程叫 reflow。
+                        常见的reflow是一些会影响页面布局的操作，诸如Tab，隐藏等。reflow 会从 html 这个 root frame
+                        开始递归往下，依次计算所有的结点几何尺寸和位置，以确认是渲染树的一部分发生变化还是整个渲染树。reflow几乎是无法避免的，因为只要用户进行交互操作，就势必会发生页面的一部分的重新渲染，且通常我们也无法预估浏览器到底会reflow哪一部分的代码，因为他们会相互影响。
+                      </li>
+                      <li>repaint（重绘）： repaint则是当我们改变某个元素的背景色、文字颜色、边框颜色等等不影响它周围或内部布局的属性时，屏幕的一部分要重画，但是元素的几何尺寸和位置没有发生改变。
+                      </li>
+                    </ul>
+                    <p>需要注意的是，display:none 会触发 reflow，而visibility:
+                      hidden属性则并不算是不可见属性，它的语义是隐藏元素，但元素仍然占据着布局空间，它会被渲染成一个空框，这在我们上面有提到过。所以 visibility:hidden 只会触发
+                      repaint，因为没有发生位置变化。</p>
+                    <p>我们不能避免reflow，但还是能通过一些操作来减少回流：</p>
+                    <ol>
+                      <li>用transform做形变和位移.</li>
+                      <li>通过绝对位移来脱离当前层叠上下文，形成新的Render Layer。</li>
+                    </ol>
+                    <p>另外有些情况下，比如修改了元素的样式，浏览器并不会立刻reflow 或 repaint 一次，而是会把这样的操作积攒一批，然后做一次 reflow，这又叫异步 reflow 或增量异步
+                      reflow。但是在有些情况下，比如 resize 窗口，改变了页面默认的字体等。对于这些操作，浏览器会马上进行 reflow。</p>
+                    <h4 id="3-3-几条关于优化渲染效率的建议"><a
+                        href="https://srtian96.gitee.io/blog/2018/06/01/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E5%8E%9F%E7%90%86/#3-3-%E5%87%A0%E6%9D%A1%E5%85%B3%E4%BA%8E%E4%BC%98%E5%8C%96%E6%B8%B2%E6%9F%93%E6%95%88%E7%8E%87%E7%9A%84%E5%BB%BA%E8%AE%AE"
+                        class="headerlink" title="3.3 几条关于优化渲染效率的建议"></a>3.3 几条关于优化渲染效率的建议</h4>
+                    <p>结合上文和我看到的一些文章，有以下几点可以优化渲染效率</p>
+                    <ol>
+                      <li>合法地去书写 HTML 和 CSS ，且不要忘了文档编码类型。</li>
+                      <li>样式文件应当在 head 标签中，而脚本文件在 body 结束前，这样可以防止阻塞的方式。</li>
+                      <li>简化并优化CSS选择器，尽量将嵌套层减少到最小。</li>
+                      <li>尽量减少在 JavaScript 中进行DOM操作。</li>
+                      <li>修改元素样式时，更改其class属性是性能最高的方法。</li>
+                      <li>尽量用 transform 来做形变和位移</li>
+                    </ol>
+                    <p>参考文章：</p>
+                    <p><a href="http://www.cnblogs.com/slly/p/6640761.html" target="_blank"
+                        rel="noopener">http://www.cnblogs.com/slly/p/6640761.html</a></p>
+                    <p><a href="https://zhuanlan.zhihu.com/p/29418126" target="_blank"
+                        rel="noopener">https://zhuanlan.zhihu.com/p/29418126</a></p>
+                    <p><a href="https://juejin.im/post/5a8e242c5188257a6b060000" target="_blank"
+                        rel="noopener">https://juejin.im/post/5a8e242c5188257a6b060000</a></p>
+                  </div>
+                </div>
+              </article>
+              <div class="post-spread">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+          <div class="sidebar-toggle-line-wrap">
+            <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+            <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+            <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+          </div>
+        </div>
+        <aside id="sidebar" class="sidebar" style="margin-top: 408px; margin-left: initial;">
+          <div class="sidebar-inner affix" style="opacity: 1; display: block; transform: initial;">
+            <ul class="sidebar-nav motion-element">
+              <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+                文章目录
+              </li>
+              <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+                站点概览
+              </li>
+            </ul>
+            <section class="site-overview-wrap sidebar-panel" style="">
+              <div class="site-overview" style="max-height: 772px;">
+                <div class="site-author motion-element" itemprop="author" itemscope=""
+                  itemtype="http://schema.org/Person">
+                  <img class="site-author-image" itemprop="image" src="./avatar.jpg"
+                    alt="Srtian">
+                  <p class="site-author-name" itemprop="name">Srtian</p>
+                  <p class="site-description motion-element" itemprop="description">JUST DO IT.</p>
+                </div>
+                <nav class="site-state motion-element">
+                  <div class="site-state-item site-state-posts">
+                    <a href="https://srtian96.gitee.io/blog/archives/">
+                      <span class="site-state-item-count">59</span>
+                      <span class="site-state-item-name">日志</span>
+                    </a>
+                  </div>
+                  <div class="site-state-item site-state-categories">
+                    <a href="https://srtian96.gitee.io/blog/categories/index.html">
+                      <span class="site-state-item-count">15</span>
+                      <span class="site-state-item-name">分类</span>
+                    </a>
+                  </div>
+                  <div class="site-state-item site-state-tags">
+                    <a href="https://srtian96.gitee.io/blog/tags/index.html">
+                      <span class="site-state-item-count">37</span>
+                      <span class="site-state-item-name">标签</span>
+                    </a>
+                  </div>
+                </nav>
+                <div class="links-of-author motion-element">
+                  <span class="links-of-author-item">
+                    <a href="https://gitee.com/srtian96" target="_blank" title="GitHub">
+
+                      <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                  <span class="links-of-author-item">
+                    <a href="https://srtian96.gitee.io/blog/2018/06/01/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E5%8E%9F%E7%90%86/shenruotian@gmail.com"
+                      target="_blank" title="E-Mail">
+                      <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                </div>
+              </div>
+            </section>
+            <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+              <div class="post-toc" style="max-height: 772px;">
+                <div class="post-toc-content">
+                  <ol class="nav">
+                    <li class="nav-item nav-level-3"><a class="nav-link"
+                        href="https://srtian96.gitee.io/blog/2018/06/01/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E5%8E%9F%E7%90%86/#%E4%B8%80%E3%80%81%E6%B5%8F%E8%A7%88%E5%99%A8%E5%A6%82%E4%BD%95%E6%B8%B2%E6%9F%93%E7%BD%91%E9%A1%B5"><span
+                          class="nav-number">1.</span> <span class="nav-text">一、浏览器如何渲染网页</span></a></li>
+                    <li class="nav-item nav-level-3 active"><a class="nav-link"
+                        href="https://srtian96.gitee.io/blog/2018/06/01/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E5%8E%9F%E7%90%86/#%E4%BA%8C%E3%80%81%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E7%BD%91%E9%A1%B5%E7%9A%84%E5%85%B7%E4%BD%93%E6%B5%81%E7%A8%8B"><span
+                          class="nav-number">2.</span> <span class="nav-text">二、浏览器渲染网页的具体流程</span></a>
+                      <ol class="nav-child">
+                        <li class="nav-item nav-level-4"><a class="nav-link"
+                            href="https://srtian96.gitee.io/blog/2018/06/01/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E5%8E%9F%E7%90%86/#2-1-%E6%9E%84%E5%BB%BADOM%E6%A0%91"><span
+                              class="nav-number">2.1.</span> <span class="nav-text">2.1 构建DOM树</span></a></li>
+                        <li class="nav-item nav-level-4"><a class="nav-link"
+                            href="https://srtian96.gitee.io/blog/2018/06/01/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E5%8E%9F%E7%90%86/#2-2-CSS%E8%A7%A3%E6%9E%90"><span
+                              class="nav-number">2.2.</span> <span class="nav-text">2.2 CSS解析</span></a></li>
+                        <li class="nav-item nav-level-4"><a class="nav-link"
+                            href="https://srtian96.gitee.io/blog/2018/06/01/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E5%8E%9F%E7%90%86/#2-3-%E6%9E%84%E5%BB%BA%E6%B8%B2%E6%9F%93%E6%A0%91%EF%BC%88Rendr-tree-construction%EF%BC%89"><span
+                              class="nav-number">2.3.</span> <span class="nav-text">2.3 构建渲染树（Rendr tree
+                              construction）</span></a></li>
+                        <li class="nav-item nav-level-4 active active-current"><a class="nav-link"
+                            href="https://srtian96.gitee.io/blog/2018/06/01/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E5%8E%9F%E7%90%86/#2-4-%E6%B8%B2%E6%9F%93%E6%A0%91%E5%B8%83%E5%B1%80-layout-of-the-render-tree"><span
+                              class="nav-number">2.4.</span> <span class="nav-text">2.4 渲染树布局(layout of the render
+                              tree)</span></a></li>
+                        <li class="nav-item nav-level-4"><a class="nav-link"
+                            href="https://srtian96.gitee.io/blog/2018/06/01/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E5%8E%9F%E7%90%86/#2-5-%E6%B8%B2%E6%9F%93%E6%A0%91%E7%BB%98%E5%88%B6%EF%BC%88Painting-the-render-tree%EF%BC%89"><span
+                              class="nav-number">2.5.</span> <span class="nav-text">2.5 渲染树绘制（Painting the render
+                              tree）</span></a></li>
+                      </ol>
+                    </li>
+                    <li class="nav-item nav-level-3"><a class="nav-link"
+                        href="https://srtian96.gitee.io/blog/2018/06/01/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E5%8E%9F%E7%90%86/#%E4%B8%89%E3%80%81%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E7%BD%91%E9%A1%B5%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF"><span
+                          class="nav-number">3.</span> <span class="nav-text">三、浏览器渲染网页的那些事儿</span></a>
+                      <ol class="nav-child">
+                        <li class="nav-item nav-level-4"><a class="nav-link"
+                            href="https://srtian96.gitee.io/blog/2018/06/01/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E5%8E%9F%E7%90%86/#3-1-%E9%98%BB%E5%A1%9E%E6%B8%B2%E6%9F%93"><span
+                              class="nav-number">3.1.</span> <span class="nav-text">3.1 阻塞渲染</span></a></li>
+                        <li class="nav-item nav-level-4"><a class="nav-link"
+                            href="https://srtian96.gitee.io/blog/2018/06/01/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E5%8E%9F%E7%90%86/#3-2-%E5%9B%9E%E6%B5%81%E5%92%8C%E9%87%8D%E7%BB%98%EF%BC%88reflow%E5%92%8Crepaint%EF%BC%89"><span
+                              class="nav-number">3.2.</span> <span class="nav-text">3.2 回流和重绘（reflow和repaint）</span></a>
+                        </li>
+                        <li class="nav-item nav-level-4"><a class="nav-link"
+                            href="https://srtian96.gitee.io/blog/2018/06/01/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E5%8E%9F%E7%90%86/#3-3-%E5%87%A0%E6%9D%A1%E5%85%B3%E4%BA%8E%E4%BC%98%E5%8C%96%E6%B8%B2%E6%9F%93%E6%95%88%E7%8E%87%E7%9A%84%E5%BB%BA%E8%AE%AE"><span
+                              class="nav-number">3.3.</span> <span class="nav-text">3.3 几条关于优化渲染效率的建议</span></a></li>
+                      </ol>
+                    </li>
+                  </ol>
+                </div>
+              </div>
+            </section>
+          </div>
+        </aside>
+      </div>
+    </main>
+  </div>
+</body>
+
+</html>
