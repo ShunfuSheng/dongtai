@@ -457,4 +457,7 @@ base64格式的图片缓存from memory
 ## XSS跨站脚本攻击：通过表单提交等手段经由服务器往web页面中插入恶意script代码；CSRF跨域攻击：通过浏览器cookie进行攻击，解决方式可通过验证referer来源
 
 
+## 采用https传输可以有效防止运营商流量劫持，但加密也是有代价的，不同于TCP/IP的三次握手，它需要七次握手，而且加上加密解密等因素，会使页面的加载时间延长近50%，增加10%到20%的耗电，从而造成系统性能下降
+
+
 ## new Date(dateString)或者new Date(year, month, day, hours...)，注意dateString在safari浏览器中有坑，不支持yyyy-MM-dd HH:mm:ss格式，要换成yyyy/MM/dd HH:mm:ss或yyyy-MM-ddTHH:mm:ss
