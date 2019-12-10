@@ -461,3 +461,6 @@ base64格式的图片缓存from memory
 
 
 ## new Date(dateString)或者new Date(year, month, day, hours...)，注意dateString在safari浏览器中有坑，不支持yyyy-MM-dd HH:mm:ss格式，要换成yyyy/MM/dd HH:mm:ss或yyyy-MM-ddTHH:mm:ss
+
+
+## xhr2的onprogress方法可以监听文件下载进度，webSocket进度回传也可以实现该功能
