@@ -1,0 +1,13 @@
+# 引入过程
+<script src="path/to/vconsole.min.js"></script>
+<script>
+  // 初始化
+  var vConsole = new VConsole();
+</script>
+
+
+# 结果可直接在页面中看到类似小程序的vconsole可拖动块
+
+
+# 同时支持js和ts
+import 'path/to/vconsole.min.d.ts';
