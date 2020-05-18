@@ -66,6 +66,9 @@ background: linear-gradient(to bottom, rgb(13,104,188), rgb(114,173,224))
 display: flex
 
 
+## 弹性布局在低版本浏览器中设置垂直居中必须明确设置当前容器的高度，否则无效
+
+
 ## 将特定字符替换成空字符，即删掉它
 string.replace('℃', '')
 
