@@ -462,6 +462,10 @@ base64格式的图片缓存from memory
 ## XSS跨站脚本攻击：通过表单提交等手段经由服务器往web页面中插入恶意script代码；CSRF跨域攻击：通过浏览器cookie进行攻击，解决方式可通过验证referer来源
 
 
+## 响应头作为cookie的终极修改者，设置后符合条件的请求头会自动带上该cookie，secure属性限制了只允许在https中传输，
+HttpOnly使js脚本无法获取和操作该cookie，防止XSS攻击；跨域请求要带上cookie需放开withCredentials参数
+
+
 ## 采用https传输可以有效防止运营商流量劫持，但加密也是有代价的，不同于TCP/IP的三次握手，它需要七次握手，而且加上加密解密等因素，会使页面的加载时间延长近50%，增加10%到20%的耗电，从而造成系统性能下降
 
 
