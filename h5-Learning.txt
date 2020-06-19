@@ -2,12 +2,16 @@
 div:nth-child(n):hover{}
 
 
-## scale指缩放，一个值指的是同时缩放，两个值指的是水平和垂直缩放
+## scale指缩放，一个值指的是同时缩放，两个值指的是水平和垂直缩放（transform样式只会引起重绘而不重排）
 transform: scale(1.5, 1.5)
 
 
-## rotate指旋转，deg指的是旋转的度数
-transform: rotate(-15deg)
+## 更改一个元素变形的原点（将上方缩放后的元素移至渲染起点）
+transform-origin: 0 0
+
+
+## IE盒模型的缩放操作，相比scale而言去除了多余空白，从而引起了视图重排，但不支持火狐
+zoom: 0.5
 
 
 ## transition属性定义动画的过渡过程，ease-in-out指的是速度曲线，由慢到快再到慢
@@ -21,10 +25,7 @@ border-radius: 50%
 line-height: 150px
 
 
-## <main>标签规定了文档的主要内容，它里面的内容对于文档来说是唯一的
-
-
-## <section>标签定义了文档的节或段
+## <main>标签规定了文档的主要内容，它里面的内容对于文档来说是唯一的；<section>标签定义了文档的节或段
 
 
 ## js中自定义的函数要在此函数外部调用才能生效
