@@ -227,6 +227,9 @@ resize: both
 ## document.compatMode用来判断当前浏览器采用的渲染方式，只有两个值：BackCompat和CSS1Compat。当document.compatMode等于BackCompat时，浏览器客户区宽度是document.body.clientWidth；当document.compatMode等于BackCompat时，浏览器客户区宽度是document.body.clientWidth
 
 
+## javascript类的本质是基于原型的对象
+
+
 第三阶段：
 ## 页面的各种扩展性功能: 页面分享效果（jiaThis,bshare,百度分享等）、在线qq客服js
 
