@@ -193,8 +193,8 @@
                     url: '/test/upload',
                     type: 'post',
                     data: formData,
-                    processData: false,
-                    contentType: false,
+                    processData: false,  // 默认情况下会将data转成查询字符串，因为data值是FormData对象，不需要对数据做处理，通过设为false来避免
+                    contentType: false,  // 如果是由<form>表单构造的FormData对象且已声明了属性，则设为false
                     success: function (res) {
                         console.log(res);
                     },
