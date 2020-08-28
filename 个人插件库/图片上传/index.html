@@ -186,6 +186,7 @@
         submitBtn.addEventListener('click', function (e) {
             // 转成blob格式，toDataURL方法可以将画布转成base64格式图片数据，两个方法都可用于图片压缩
             resultImg.toBlob(function (blob) {
+                // 如果参数为from元素，form要添加enctype="multipart/form-data"属性
                 var formData = new FormData();
                 formData.append('sheng', blob);
                 $.ajax({
