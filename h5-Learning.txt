@@ -378,7 +378,7 @@ configurable: 目标属性是否可以被删除或是否可以再次修改特性
 ## window.requestIdleCallback 运行机制类似于setTimeout，会在浏览器空闲时期依次调用函数，可设置超时时间，目前对于浏览器的支持度很差
 
 
-## overscroll-behavior 属性用于解决连锁滚动问题或禁止浏览器自带的滚动效果，IE目前使用-ms-scroll-chaining代替
+## overscroll-behavior 属性用于解决连锁滚动问题或禁止浏览器自带的滚动效果，IE目前使用-ms-scroll-chaining代替，Safari目前不支持该属性
 
 
 ## IndexedDB是浏览器的内置数据库，不同于WebSQL的是它更像是一个NoSQL，不同于localStorage的是其API都是异步操作类型
