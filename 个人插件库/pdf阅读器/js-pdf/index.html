@@ -1,0 +1,29 @@
+<html>
+
+<head>
+  <title>PDFObject example</title>
+  <style>
+    #sheng {
+      width: 800px;
+      height: 800px;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="sheng">
+    <iframe src="https://www.jq22.com/demo/pdfobject-141021092802/sample.pdf" frameborder="0"></iframe>
+  </div>
+</body>
+
+<script type="text/javascript" src="js/pdfobject.js"></script>
+<script type="text/javascript">
+  window.onload = function () {
+    var myPDF = new PDFObject({ url: "https://www.jq22.com/demo/pdfobject-141021092802/sample.pdf" }).embed('sheng');
+  };
+</script>
+</html>
