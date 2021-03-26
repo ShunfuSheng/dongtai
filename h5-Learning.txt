@@ -355,8 +355,9 @@ configurable: 目标属性是否可以被删除或是否可以再次修改特性
 
 ## images.weserv.nl：一个图片请求代理服务，可以解决反盗链问题，还可以为图片做各种预处理，比如指定大小、裁剪、滤镜等。但是在国内访问速度有点而且有被墙的风险
 
-
 ## http://source.unsplash.com/random/400x600  随机获取自定义尺寸的免费版权商用图片
+     http://source.unsplash.com/random/400x0?nature,girl  随机获取指定关键字的不经裁剪的图片
+     http://source.unsplash.com/user/raaminka/400x400  随机获取某位作者的图片
 
 
 ## referrer除了可以解决反盗链问题，也可以用来解决http和https之间的资源访问问题
