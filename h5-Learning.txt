@@ -176,6 +176,9 @@ word-break: break-all;  // ²»»á°Ñ³¤µ¥´Ê£¨ÐÂ¾ä£©·ÅÖÃµ½ÐÂµÄÒ»ÐÐÀ´£¬µ±ÕâÒ»ÐÐ·Å²»ÏÂÕ
 resize: both
 
 
+## resizeµÄÉèÖÃÊ¹ÓÃ»§ÄÜ×Ô¼ºÍÏ¶¯ÈÝÆ÷¿ØÖÆ´óÐ¡£¬µ«Ç°ÌáÊÇoverflow²»ÎªÄ¬ÈÏÖµ
+
+
 ## ÖÐÎÄ×Ö·û¿ÉÒÔÔÚÈÎÒâÁ½¸ö×ÖÖ®¼ä»»ÐÐ£¬ËùÒÔÍ¨³£»á³öÏÖ×ÝÏò¹ö¶¯Ìõ£¬¶øÓ¢ÎÄµ¥´ÊÄ¬ÈÏ²»»áÔÚµ¥´ÊÄÚ²¿»»ÐÐ£¬ËùÒÔÈç¹ûÐ´Ò»¸ö³¤µ¥´ÊÔò²»»á³öÏÖ»»ÐÐ,Í¨³£³öÏÖºáÏò¹ö¶¯Ìõ
 
 
@@ -203,9 +206,6 @@ resize: both
 ## ÑùÊ½¼Ì³Ð£ºÍ¨³£¸úÎÄ±¾ÓÐ¹ØµÄÑùÊ½ºÍ¸úÁÐ±íÓÐ¹ØµÄÑùÊ½ÊÇ¿ÉÒÔ¼Ì³ÐµÄ£¬¶ø¸úºÐÄ£ÐÍÖ®ÀàÓÐ¹ØµÄÑùÊ½Í¨³£ÊÇ²»ÄÜ¼Ì³ÐµÄ£¬²¿·Ö±êÇ©ÄÚ²¿×Ô´øÁËÒ»Ð©ÑùÊ½£¬ÐèÒªÔÚÕâÐ©±êÇ©ÖÐ¸²¸ÇµôÔ­Öµ£¬ÓÐÐ©ÔªËØÄÚ²¿×Ô´øÁËÏà¶Ô×ÖÌå´óÐ¡£¬Èçh1£¬smallµÈ£¬ËüÃÇÔÚ¼Ì³Ð¸¸ÀàÑùÊ½µÄÊ±ºòfont-sizeÐèÒªÖØÐÂ¼ÆËã£¬µ±È»Ò²¿ÉÒÔÖ±½ÓÇ¿ÖÆ¸Ä±äÆäÑùÊ½
 
 
-## resizeµÄÉèÖÃÊ¹ÓÃ»§ÄÜ×Ô¼ºÍÏ¶¯ÈÝÆ÷¿ØÖÆ´óÐ¡£¬µ«Ç°ÌáÊÇoverflow²»ÎªÄ¬ÈÏÖµ
-
-
 ## inline-blockºÍinline-tableµÄÇø±ðÊÇÇ°Õßµ¥Ôª¸ñ²»»á×Ô¶¯ÉìËõ£¬ÄÚÈÝÓÐ¶à´ó£¬td¾ÍÖ»ÓÐ¶à´ó£»ºóÕß»á×Ô¶¯ÉìËõ£¬´Ó¶ø³äÂúÕû¸ötable
 
 
@@ -224,7 +224,7 @@ resize: both
 ## window¶ÔÏóÓÐ¸önameÊôÐÔ£¬¸ÃÊôÐÔÓÐ¸öÌØÕ÷£º¼´ÔÚÒ»¸ö´°¿Ú(window)µÄÉúÃüÖÜÆÚÄÚ,´°¿ÚÔØÈëµÄËùÓÐµÄÒ³Ãæ¶¼ÊÇ¹²ÏíÒ»¸öwindow.nameµÄ£¬Ã¿¸öÒ³Ãæ¶Ôwindow.name¶¼ÓÐ¶ÁÐ´µÄÈ¨ÏÞ£¬window.nameÊÇ³Ö¾Ã´æÔÚÒ»¸ö´°¿ÚÔØÈë¹ýµÄËùÓÐÒ³ÃæÖÐµÄ£¬²¢²»»áÒòÐÂÒ³ÃæµÄÔØÈë¶ø½øÐÐÖØÖÃ¡£
 
 
-## document.compatModeÓÃÀ´ÅÐ¶Ïµ±Ç°ä¯ÀÀÆ÷²ÉÓÃµÄäÖÈ¾·½Ê½£¬Ö»ÓÐÁ½¸öÖµ£ºBackCompatºÍCSS1Compat¡£µ±document.compatModeµÈÓÚBackCompatÊ±£¬ä¯ÀÀÆ÷¿Í»§Çø¿í¶ÈÊÇdocument.body.clientWidth£»µ±document.compatModeµÈÓÚBackCompatÊ±£¬ä¯ÀÀÆ÷¿Í»§Çø¿í¶ÈÊÇdocument.body.clientWidth
+## document.compatModeÓÃÀ´ÅÐ¶Ïµ±Ç°ä¯ÀÀÆ÷²ÉÓÃµÄäÖÈ¾·½Ê½£¬Ö»ÓÐÁ½¸öÖµ£ºBackCompatºÍCSS1Compat¡£µ±compatModeµÈÓÚBackCompatÊ±£¬ä¯ÀÀÆ÷¿Í»§Çø¿í¶ÈÊÇdocument.body.clientWidth£»µ±compatModeµÈÓÚCSS1CompatÊ±£¬ä¯ÀÀÆ÷¿Í»§Çø¿í¶ÈÊÇdocument.documentElement.clientWidth
 
 
 ## javascriptÀàµÄ±¾ÖÊÊÇ»ùÓÚÔ­ÐÍµÄ¶ÔÏó
