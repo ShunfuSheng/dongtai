@@ -501,3 +501,6 @@ HttpOnly使js脚本无法获取和操作该cookie，防止XSS攻击；跨域请求要带上cookie需放开w
 
 ## IOS由于自身政策限制，第三方浏览器不能使用各自的内核，只能用ios自带的webkit系统内核；
 Android的系统内置Webview在低版本和高版本采用了不同的webkit版本内核，4.4后直接使用了Chrome
+
+
+## shadow dom：隐藏的DOM树，在其内部可以维护自己的dom，css，事件等，具有很好的密封性，这些对外均不可见，例如audio和video标签
