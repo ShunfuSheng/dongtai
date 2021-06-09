@@ -504,3 +504,10 @@ AndroidµÄÏµÍ³ÄÚÖÃWebviewÔÚµÍ°æ±¾ºÍ¸ß°æ±¾²ÉÓÃÁË²»Í¬µÄwebkit°æ±¾ÄÚºË£¬4.4ºóÖ±½ÓÊ¹Ó
 
 
 ## shadow dom£ºÒþ²ØµÄDOMÊ÷£¬ÔÚÆäÄÚ²¿¿ÉÒÔÎ¬»¤×Ô¼ºµÄdom£¬css£¬ÊÂ¼þµÈ£¬¾ßÓÐºÜºÃµÄÃÜ·âÐÔ£¬ÕâÐ©¶ÔÍâ¾ù²»¿É¼û£¬ÀýÈçaudioºÍvideo±êÇ©
+
+
+## BFC£¨¿é¼¶¸ñÊ½»¯ÉÏÏÂÎÄ£©£¬¾ö¶¨ÁË¿é¼¶ÔªËØÈçºÎ¶ÔËüµÄÄÚÈÝ½øÐÐ²¼¾Ö£¬ÒÔ¼°ÓëÆäËûÔªËØµÄ¹ØÏµºÍÏà»¥¹ØÏµ£¬ÒýÉê³öIFC£¨ÐÐ¼¶¸ñÊ½»¯ÉÏÏÂÎÄ£©
+BFC´¥·¢Ìõ¼þ£º1. ¸ùÔªËØ£»2. floatµÄÖµ²»Îªnone£»3. overflowµÄÖµ²»Îªvisible£»4. displayµÄÖµÎªinline-block¡¢table-cell¡¢table-caption¡¢flex£»
+                       5. positionµÄÖµÎªabsolute»òfixed
+BFC²¼¾Ö¹æÔò£º1. ¸¡¶¯µÄÔªËØ»á±»¸¸¼¶¼ÆËã¸ß¶È£¨¸¸¼¶´¥·¢ÁËBFC£©£»2. ·Ç¸¡¶¯ÔªËØ²»»á¸²¸Ç¸¡¶¯ÔªËØÎ»ÖÃ£¨·Ç¸¡¶¯ÔªËØ´¥·¢ÁËBFC£©£»
+                       3. margin²»»á´«µÝ¸ø¸¸¼¶£¨¸¸¼¶´¥·¢ÁËBFC£©£»4. Á½¸öÏàÁÚÔªËØÉÏÏÂmargin²»»áÖØµþ£¨ÆäÖÐÒ»¸öÔªËØµÄ¸¸¼¶´¥·¢BFC£©
